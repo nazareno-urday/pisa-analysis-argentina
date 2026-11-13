@@ -236,3 +236,5 @@ tmp/
 # Editor
 .idea/
 .vscode/
+*.sav
+*.zip
