@@ -62,16 +62,21 @@ No se exige que los resultados sean estadísticamente significativos.
 - El archivo de PISA 2025 usa documentación técnica provisional (informe técnico final previsto para 2027).
 - Los datos de UNICEF corresponden a otra población (urbana, 9 a 17 años) y no se mezclan con los de PISA.
 
-## Resultados principales (Etapa 4)
+## Resultados principales
 
-Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb` y `reports/tables/03_resultados_hipotesis.csv`. Todo con pesos de PISA, 80 réplicas y 10 valores plausibles.
+Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb`, `notebooks/05_informe_final.ipynb` y `reports/tables/`. Todo con pesos de PISA, 80 réplicas y 10 valores plausibles.
 
+**Hipótesis principales**
 - **H1:** el ESCS se asocia con el rendimiento: +30,6 puntos de ciencias por unidad de ESCS; el cuartil más alto supera al más bajo en 82,4 puntos.
 - **H2:** los estudiantes de mayor ESCS usan IA con más frecuencia (entre 13 y 17 puntos porcentuales más de uso semanal o diario, según la actividad).
-- **H3:** usar IA seguido (semanal o diario) se asocia con más puntaje en investigar, ayudar a aprender y resumir (+18,8 a +28,4 puntos, sin ajustar), pero no de forma concluyente en redactar borradores.
-- **H4:** ajustando por ESCS, sexo y grado, la asociación baja a +4,0 puntos por punto de frecuencia (sin ajustar +9,5).
+- **H3:** usar IA seguido (semanal o diario) se asocia con más puntaje en investigar, ayudar a aprender y resumir (+18,8 a +28,4 puntos, **sin ajustar**), pero no de forma concluyente en redactar borradores.
+
+**Complementos**
+- **H4:** ajustando por ESCS, sexo y grado, la asociación de H3 baja a +4,0 puntos por punto de frecuencia (sin ajustar +9,5).
 - **H5 (exploratoria):** evidencia insuficiente de que la asociación cambie con el ESCS.
-- **HC1 (complementaria):** quienes no contestaron las preguntas de IA tienen unos 66 puntos menos de ciencias (54 ajustando por ESCS).
+- **HC1 (surgió al preparar los datos):** quienes no contestaron las preguntas de IA tienen unos 66 puntos menos de ciencias (54 ajustando por ESCS).
+
+**Posibles estudios siguientes (no probados):** uso de IA según el propósito y el nivel socioeconómico, a quién llega la IA según el rendimiento, comparación dentro de una misma escuela y quiénes son los que no contestaron.
 
 ## 7. Estructura
 
