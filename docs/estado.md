@@ -1,7 +1,7 @@
 # Estado del proyecto
 
 **Última actualización:** 13/11/2026
-**Etapa actual:** 4 (Análisis) terminada; en revisión independiente
+**Etapa actual:** 4 (Análisis) terminada y revisada; falta informe final y reproducción limpia
 **Etapa 0:** aprobada y publicada (push 13/11/2026)
 
 ## Hecho
@@ -40,4 +40,5 @@
 - `notebooks/03_exploracion_e_hipotesis.ipynb`; tabla completa en `reports/tables/03_resultados_hipotesis.csv`; figuras `03_*` en `reports/figures/`.
 - Inferencia con peso final, 80 pesos replicados (divisor 20, factor de Fay 0,5 sin confirmar) y 10 valores plausibles con reglas de Rubin.
 - H1: +30,6 puntos de ciencias por unidad de ESCS; H2: mayor uso frecuente de IA en el cuartil de ESCS más alto; H3: uso frecuente de IA asociado a más puntaje en investigar, ayudar a aprender y resumir; H4: +4,0 puntos por punto de frecuencia ajustado (+9,5 sin ajustar); H5: evidencia insuficiente; HC1 (complementaria): quienes no contestaron IA tienen 66,0 puntos menos de ciencias (53,8 ajustado por ESCS), sin contar a los 526 con pregunta no administrada.
-- Pendiente: validar la inferencia contra otro software y confirmar el factor de Fay.
+- Validación: una implementación independiente (otro código, mismos datos) reprodujo la pendiente de ESCS, el contraste entre cuartiles, el coeficiente de IA ajustado y la diferencia de HC1 original con coincidencia dentro de 0,01. No se contrastó contra software estadístico de terceros (R `intsvy` o `Rrepest`).
+- Pendiente: confirmar el factor de Fay (0,5) en la documentación técnica de PISA 2025. Los cortes de los cuartiles de ESCS son fijos entre réplicas (práctica habitual, pero no incluye su variabilidad en el error estándar).
