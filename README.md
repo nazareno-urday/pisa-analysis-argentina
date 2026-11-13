@@ -64,7 +64,7 @@ No se exige que los resultados sean estadísticamente significativos.
 
 ## Resultados principales
 
-Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb`, `notebooks/05_informe_final.ipynb` y `reports/tables/`. Todo con pesos de PISA, 80 réplicas y 10 valores plausibles.
+Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb`, `notebooks/05_hipotesis_exploratorias.ipynb`, `notebooks/06_informe_final.ipynb` y `reports/tables/`. Todo con pesos de PISA, 80 réplicas y 10 valores plausibles.
 
 **Hipótesis principales**
 - **H1:** el ESCS se asocia con el rendimiento: +30,6 puntos de ciencias por unidad de ESCS; el cuartil más alto supera al más bajo en 82,4 puntos.
@@ -76,7 +76,12 @@ Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb`, `
 - **H5 (exploratoria):** evidencia insuficiente de que la asociación cambie con el ESCS.
 - **HC1 (surgió al preparar los datos):** quienes no contestaron las preguntas de IA tienen unos 66 puntos menos de ciencias (54 ajustando por ESCS).
 
-**Posibles estudios siguientes (no probados):** uso de IA según el propósito y el nivel socioeconómico, a quién llega la IA según el rendimiento, comparación dentro de una misma escuela y quiénes son los que no contestaron.
+**Hipótesis exploratorias atrevidas** (planteadas después de ver los resultados anteriores, registradas antes de calcularlas, con corrección de Bonferroni):
+- **HC3:** el cuartil de mayor rendimiento en ciencias usa IA semanal o diariamente 16,6 puntos porcentuales más que el de menor rendimiento. No se sabe qué causa qué.
+- **HC4:** dentro de una misma escuela la asociación entre nivel socioeconómico y frecuencia de uso de IA es menos de la mitad (0,080) que en el total (0,185): más de la mitad de la brecha de uso se da entre escuelas.
+- **HC2:** no se sostuvo que los estudiantes de distinto nivel socioeconómico usen la IA para cosas distintas (investigar y aprender contra redactar): +0,08, IC 95 %: -0,03 a 0,19.
+
+**Posibles estudios siguientes (no probados):** quiénes son los que no contestaron y por qué, relación de la brecha entre escuelas con características de las escuelas, y evolución en nuevas ediciones de PISA.
 
 ## 7. Estructura
 
@@ -110,13 +115,14 @@ python -m venv .venv
 | 3 | `02_preparacion.ipynb` | Conjunto analítico (se guarda en `data/processed/`) |
 | 4 | `03_exploracion_e_hipotesis.ipynb` | Pruebas de H1 a H5 y HC1 |
 | 5 | `04_sensibilidad_y_evaluacion.ipynb` | Pruebas de sensibilidad |
-| 6 | `05_informe_final.ipynb` | Informe final |
+| 6 | `05_hipotesis_exploratorias.ipynb` | Hipótesis exploratorias HC2 a HC4 |
+| 7 | `06_informe_final.ipynb` | Informe final |
 
 ```powershell
 .venv\Scripts\python -m jupyter lab
 ```
 
-Se comprobó que los seis notebooks corren en orden en un entorno nuevo creado con `requirements.txt` y que las tablas y figuras guardadas no cambian.
+Se comprobó que los notebooks 00 a 04 y el informe corren en orden en un entorno nuevo creado con `requirements.txt` y que las tablas y figuras guardadas no cambian.
 
 ## 9. Uso de IA en el proceso
 
