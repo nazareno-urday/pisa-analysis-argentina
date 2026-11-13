@@ -2,7 +2,7 @@
 
 Proyecto de ciencia de datos de punta a punta con datos reales de PISA 2025 (OCDE). Todo el análisis está en notebooks `.ipynb`.
 
-> **Estado:** en desarrollo. Etapa 0 (viabilidad) terminada; Etapa 1 (definición del problema) en este documento. Los resultados todavía no existen y no se afirma nada sobre ellos.
+> **Estado:** en desarrollo. Etapas 0 a 4 hechas (viabilidad, problema, comprensión, preparación y primer análisis). Falta la revisión final, el informe y la reproducción desde un entorno limpio. Los resultados son asociaciones, no causas.
 
 ## 1. Problema
 
@@ -41,7 +41,7 @@ Pregunta principal: **¿cómo se asocian el uso de IA y el contexto socioeconóm
 | H2 | La frecuencia de uso de IA es independiente del ESCS | Diferencia en la frecuencia de uso entre cuartiles de ESCS | IA y ESCS |
 | H3 | No hay diferencias de rendimiento según la frecuencia de uso de IA | Diferencia de puntaje entre quienes nunca usan y quienes usan seguido, por actividad | IA y rendimiento |
 | H4 | No hay asociación entre uso de IA y rendimiento tras ajustar por contexto | Coeficiente de la frecuencia de IA con ESCS y otras covariables disponibles | Variables anteriores |
-| H5 (exploratoria) | La asociación IA-rendimiento no cambia con el ESCS | Interacción IA × ESCS | Tamaño de muestra suficiente |
+| H5 (exploratoria) | La asociación IA-rendimiento no cambia con el ESCS | Interacción IA × ESCS | Cobertura y tamaño de muestra suficientes |
 
 Cada hipótesis se responderá con una de tres frases: *evidencia compatible con una asociación*, *evidencia insuficiente* o *no evaluable con estos datos*. No se "acepta H0" como prueba de ausencia de efecto. Se informará la magnitud y la incertidumbre, no solo el p-valor.
 
@@ -57,10 +57,21 @@ No se exige que los resultados sean estadísticamente significativos.
 ## 6. Límites y riesgos
 
 - Solo asociaciones, no causalidad. El uso de IA es autorreportado.
-- Alrededor del 30 % de los estudiantes argentinos no tiene dato en las preguntas de IA; hay que estudiar por qué antes de analizar.
+- Alrededor de un tercio de los estudiantes argentinos (32,6 %) no contestó las cuatro preguntas de IA, y quienes no contestaron rinden bastante menos. Los resultados sobre IA valen para quienes contestaron.
 - El nivel socioeconómico (ESCS) es un índice relativo, no un ingreso.
 - El archivo de PISA 2025 usa documentación técnica provisional (informe técnico final previsto para 2027).
 - Los datos de UNICEF corresponden a otra población (urbana, 9 a 17 años) y no se mezclan con los de PISA.
+
+## Resultados principales (Etapa 4)
+
+Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb` y `reports/tables/03_resultados_hipotesis.csv`. Todo con pesos de PISA, 80 réplicas y 10 valores plausibles.
+
+- **H1:** el ESCS se asocia con el rendimiento: +30,6 puntos de ciencias por unidad de ESCS; el cuartil más alto supera al más bajo en 82,4 puntos.
+- **H2:** los estudiantes de mayor ESCS usan IA con más frecuencia (entre 13 y 17 puntos porcentuales más de uso semanal o diario, según la actividad).
+- **H3:** usar IA seguido (semanal o diario) se asocia con más puntaje en investigar, ayudar a aprender y resumir (+18,8 a +28,4 puntos, sin ajustar), pero no de forma concluyente en redactar borradores.
+- **H4:** ajustando por ESCS, sexo y grado, la asociación baja a +4,0 puntos por punto de frecuencia (sin ajustar +9,5).
+- **H5 (exploratoria):** evidencia insuficiente de que la asociación cambie con el ESCS.
+- **HC1 (complementaria):** quienes no contestaron las preguntas de IA tienen unos 66 puntos menos de ciencias (54 ajustando por ESCS).
 
 ## 7. Estructura
 
