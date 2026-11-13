@@ -74,3 +74,15 @@
 | Declaración del uso de IA en el README | Pendiente de acordar |
 | Licencia del código | Pendiente de elegir |
 | H1, H2 y H3 como hipótesis principales; H4, H5 y HC1 como complementos; ideas nuevas (propósito de uso, a quién llega la IA, comparación dentro de la escuela) como posibles estudios siguientes sin probar | Aprobada por el estudiante |
+
+## 13/11/2026 · Hipótesis exploratorias atrevidas (registradas ANTES de calcular)
+
+Surgieron después de ver los resultados de H1 a H5, por eso son exploratorias. Se informarán todas, con el resultado que salga, y con corrección de Bonferroni para tres hipótesis (p < 0,05 / 3 = 0,0167).
+
+| ID | Hipótesis | Parámetro | Muestra | Resultado esperado |
+| --- | --- | --- | --- | --- |
+| HC2 · "Para qué" | Los estudiantes de mayor ESCS usan la IA más para investigar y aprender, y los de menor ESCS más para redactar borradores | Índice de tipo de uso por estudiante = promedio de frecuencia de "investigar" y "ayudar a aprender" menos frecuencia de "redactar borradores". Diferencia del índice entre el cuartil 4 y el cuartil 1 de ESCS | 7.191 con ESCS y las 4 preguntas | Diferencia positiva |
+| HC3 · "A quién llega" | La IA llega más a quienes rinden más: el uso semanal o diario en alguna actividad es mayor en el cuartil de mayor rendimiento en ciencias que en el de menor rendimiento | Diferencia en la proporción que usa IA semanal o diariamente en alguna actividad: cuartil 4 de ciencias menos cuartil 1 (los cortes se recalculan con cada valor plausible y cada peso) | 7.191 | Diferencia positiva |
+| HC4 · "La misma escuela" | La brecha de uso de IA según ESCS se mantiene al comparar estudiantes de una misma escuela | Coeficiente de ESCS sobre la frecuencia promedio de IA, total y dentro de escuela (restando el promedio ponderado de cada escuela) | 7.191 | Coeficiente dentro de escuela positivo y menor al total |
+
+Advertencias acordadas antes de calcular: son asociaciones; si el rendimiento (HC3) se relaciona con el uso de IA no se sabe cuál causa cuál; y todas valen solo para quienes contestaron las preguntas de IA.
