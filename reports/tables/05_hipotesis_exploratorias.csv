@@ -1,0 +1,6 @@
+hipotesis,parametro,n,estimacion,error_estandar,ic95_inferior,ic95_superior,p,p_texto,veredicto,nota,clara_con_bonferroni
+HC2,Índice de tipo de uso (investigar y aprender menos redactar): cuartil 4 menos cuartil 1 de ESCS,7191,0.082,0.057,-0.03,0.194,0.152635577308071,0.1526,evidencia insuficiente,exploratoria,False
+HC3,"Proporción que usa IA semanal o diaria en alguna actividad: cuartil 4 de ciencias menos cuartil 1 (0,10 = 10 puntos porcentuales)",7191,0.166,0.027,0.113,0.22,1.1608461819536367e-09,"<0,0001",compatible con una asociación,exploratoria,True
+HC3,Frecuencia promedio de IA (1 a 5): cuartil 4 de ciencias menos cuartil 1,7191,0.379,0.076,0.23,0.529,6.876083079143502e-07,"<0,0001",compatible con una asociación,exploratoria,True
+HC4,"ESCS sobre frecuencia de IA, total (puntos de la escala 1 a 5 por unidad de ESCS)",7191,0.185,0.024,0.139,0.231,5.026811958600627e-15,"<0,0001",compatible con una asociación,exploratoria,True
+HC4,"ESCS sobre frecuencia de IA, dentro de escuela",7191,0.08,0.028,0.026,0.134,0.0036104207230763592,0.0036,compatible con una asociación,exploratoria,True
