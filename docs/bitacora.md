@@ -86,3 +86,5 @@ Surgieron después de ver los resultados de H1 a H5, por eso son exploratorias. 
 | HC4 · "La misma escuela" | La brecha de uso de IA según ESCS se mantiene al comparar estudiantes de una misma escuela | Coeficiente de ESCS sobre la frecuencia promedio de IA, total y dentro de escuela (restando el promedio ponderado de cada escuela) | 7.191 | Coeficiente dentro de escuela positivo y menor al total |
 
 Advertencias acordadas antes de calcular: son asociaciones; si el rendimiento (HC3) se relaciona con el uso de IA no se sabe cuál causa cuál; y todas valen solo para quienes contestaron las preguntas de IA.
+
+Resultados: HC2 no se sostuvo (evidencia insuficiente); HC3 se sostuvo; HC4 se sostuvo con un coeficiente menor dentro de escuela. Notebook 05 para las hipótesis exploratorias y 06 para el informe final (renumerados para que el orden de ejecución coincida con los nombres).
