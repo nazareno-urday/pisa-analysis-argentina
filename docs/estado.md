@@ -55,9 +55,11 @@
 ## Etapa 7
 - Reproducción: los seis notebooks corrieron en orden en un entorno nuevo creado con `requirements.txt`; las tablas y figuras versionadas no cambiaron.
 - README con instalación, obtención de datos, orden de notebooks y resultados principales.
-- Pendiente: licencia del código (a elegir).
+- Licencia del código: MIT.
 
 ## Hipótesis exploratorias (HC2 a HC4)
 - `notebooks/05_hipotesis_exploratorias.ipynb` y `reports/tables/05_hipotesis_exploratorias.csv`; registradas en la bitácora antes de calcularlas.
 - HC3: +16,6 puntos porcentuales de uso semanal o diario en el cuartil de mayor rendimiento (IC 95 %: 11,3 a 22,0). HC4: coeficiente de ESCS sobre frecuencia de IA 0,185 en total y 0,080 dentro de escuela. HC2: no concluyente (+0,08; -0,03 a 0,19).
 - El informe final pasó a ser `notebooks/07_informe_final.ipynb`; hay que repetir la reproducción en un entorno limpio con los 7 notebooks.
+
+- El informe final (`notebooks/07_informe_final.ipynb`) incluye la sección 5, con la confianza en cada hipótesis según sus p-valores, umbrales de Bonferroni, tamaño e intervalos.
