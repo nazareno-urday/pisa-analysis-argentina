@@ -2,7 +2,7 @@
 
 Proyecto de ciencia de datos de punta a punta con datos reales de PISA 2025 (OCDE). Todo el análisis está en notebooks `.ipynb`.
 
-> **Estado:** en desarrollo. Etapas 0 a 4 hechas (viabilidad, problema, comprensión, preparación y primer análisis). Falta la revisión final, el informe y la reproducción desde un entorno limpio. Los resultados son asociaciones, no causas.
+> **Estado:** análisis e informe terminados (notebooks 00 a 05). Los resultados son asociaciones, no causas. Pendiente: declaración del uso de IA en el proceso y revisión final del profesor.
 
 ## 1. Problema
 
@@ -57,7 +57,7 @@ No se exige que los resultados sean estadísticamente significativos.
 ## 6. Límites y riesgos
 
 - Solo asociaciones, no causalidad. El uso de IA es autorreportado.
-- Alrededor de un tercio de los estudiantes argentinos (32,6 %) no contestó las cuatro preguntas de IA, y quienes no contestaron rinden bastante menos. Los resultados sobre IA valen para quienes contestaron.
+- Entre los estudiantes a quienes se les hicieron las preguntas de IA (10.566), alrededor del 29 % (3.091) no las contestó, y quienes no contestaron rinden bastante menos. Los resultados sobre IA valen para quienes contestaron.
 - El nivel socioeconómico (ESCS) es un índice relativo, no un ingreso.
 - El archivo de PISA 2025 usa documentación técnica provisional (informe técnico final previsto para 2027).
 - Los datos de UNICEF corresponden a otra población (urbana, 9 a 17 años) y no se mezclan con los de PISA.
@@ -77,20 +77,41 @@ Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb` y 
 
 | Ruta | Contenido |
 | --- | --- |
-| `notebooks/` | Análisis, un notebook por etapa |
+| `notebooks/` | Análisis, un notebook por etapa (ver orden en la sección 8) |
 | `docs/` | Fuentes y licencias, bitácora de decisiones, estado |
 | `reports/` | Figuras y tablas pequeñas (a medida que existan) |
 | `data/` | Datos originales y derivados (no se versionan) |
 
 ## 8. Cómo ejecutar
 
+1. **Entorno** (Windows, PowerShell):
+
 ```powershell
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
+```
+
+2. **Datos** (no se incluyen en el repositorio). Descargar de la OCDE, usando los enlaces de [`docs/fuentes_y_licencias.md`](docs/fuentes_y_licencias.md):
+   - PISA 2025, archivo de estudiantes `CY09_MS_STU_PUF.zip` (unos 993 MB): descomprimir el `.sav` en `data/raw/pisa2025/extraido/`.
+   - Codebook `PISA2025_Codebook.xlsx` de la página de PISA 2025, en `data/raw/pisa2025/docs/` (se descarga a mano; la OCDE bloquea la descarga automática).
+   - PISA 2022, archivo de estudiantes `STU_QQQ_SPSS.zip`: descomprimir el `.sav` en `data/raw/pisa2022/sav/`.
+
+3. **Notebooks**, en este orden (cada uno se ejecuta de arriba abajo con el kernel reiniciado):
+
+| Orden | Notebook | Qué hace |
+| --- | --- | --- |
+| 1 | `00_viabilidad_y_fuentes.ipynb` | Fuentes y comprobación de viabilidad |
+| 2 | `01_carga_y_comprension.ipynb` | Carga, diccionario de datos y faltantes |
+| 3 | `02_preparacion.ipynb` | Conjunto analítico (se guarda en `data/processed/`) |
+| 4 | `03_exploracion_e_hipotesis.ipynb` | Pruebas de H1 a H5 y HC1 |
+| 5 | `04_sensibilidad_y_evaluacion.ipynb` | Pruebas de sensibilidad |
+| 6 | `05_informe_final.ipynb` | Informe final |
+
+```powershell
 .venv\Scripts\python -m jupyter lab
 ```
 
-Los archivos de datos se obtienen de la OCDE (enlaces en `docs/fuentes_y_licencias.md`) y se ubican en `data/raw/`.
+Se comprobó que los seis notebooks corren en orden en un entorno nuevo creado con `requirements.txt` y que las tablas y figuras guardadas no cambian.
 
 ## 9. Uso de IA en el proceso
 
