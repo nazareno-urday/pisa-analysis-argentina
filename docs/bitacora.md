@@ -64,3 +64,12 @@
 | Pocas variantes de sensibilidad decididas de antemano (área, medida de IA, controles, contraste estricto) | Propuesta |
 | No incluir componente predictivo; el notebook 04 es de sensibilidad | Propuesta |
 | Continuar con el informe final | Propuesta |
+
+## 13/11/2026 · Etapas 6 y 7
+
+| Decisión | Estado |
+| --- | --- |
+| Informe final como notebook (sin app ni modelo desplegado) | Propuesta |
+| Unificar el denominador de la no respuesta: 3.091 de 10.566 (29 %) a quienes se les administró la pregunta | Propuesta |
+| Declaración del uso de IA en el README | Pendiente de acordar |
+| Licencia del código | Pendiente de elegir |

@@ -1,7 +1,7 @@
 # Estado del proyecto
 
 **Última actualización:** 13/11/2026
-**Etapa actual:** 5 (Evaluación) terminada; en curso 6 (Informe final)
+**Etapa actual:** 7 (Cierre) casi terminada; faltan declaración de uso de IA y revisión del estudiante
 **Etapa 0:** aprobada y publicada (push 13/11/2026)
 
 ## Hecho
@@ -48,3 +48,11 @@
 - Variantes: otras áreas, otras medidas de IA, otros controles y contraste más estricto. El signo y el patrón por actividad se mantienen; el tamaño depende de los controles (+9,5 sin controles, +5,0 con ESCS, +4,0 con ESCS, sexo y grado).
 - Decisión: continuar con el informe final comunicando que valen para quienes contestaron, que el tamaño es modesto y que no son causales.
 - No se incluyó un componente predictivo (no fue acordado), por eso el notebook 04 es de sensibilidad y no de modelado.
+
+## Etapa 6
+- `notebooks/05_informe_final.ipynb`, revisado contra las tablas por un revisor independiente; se corrigieron denominadores (29 % de quienes recibieron la pregunta), mezcla de resultados ajustados y no ajustados y redacción para docentes.
+
+## Etapa 7
+- Reproducción: los seis notebooks corrieron en orden en un entorno nuevo creado con `requirements.txt`; las tablas y figuras versionadas no cambiaron.
+- README con instalación, obtención de datos, orden de notebooks y resultados principales.
+- Pendiente: sección de uso de IA en el proceso (a acordar) y licencia del código (a elegir).
