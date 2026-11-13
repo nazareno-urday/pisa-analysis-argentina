@@ -1,8 +1,8 @@
 # Estado del proyecto
 
 **Última actualización:** 13/11/2026
-**Etapa actual:** 0 (Viabilidad y fuentes), lista para revisión
-**Próxima etapa:** 1 (Problema), solo tras aprobación
+**Etapa actual:** 1 (Problema) terminada; en curso 2 (Comprensión)
+**Etapa 0:** aprobada y publicada (push 13/11/2026)
 
 ## Hecho
 - Fuentes localizadas y descargadas (ver `docs/fuentes_y_licencias.md`).
@@ -19,3 +19,7 @@
 - Alrededor del 30 % de los estudiantes argentinos no tiene dato en las preguntas de IA (28,3 % en las cuatro, 32,6 % en alguna); el origen (filtro, rotación o no respuesta) no está determinado. El archivo declara los códigos 95 a 99, pero la lectura actual los convierte en faltante; en la Etapa 1 se leerá conservándolos para distinguirlos.
 - Términos de uso y atribución de la OCDE no verificados; documentación técnica de 2025 no revisada (informe técnico final previsto para 2027).
 - Factor de replicación de los pesos no confirmado en documentación oficial.
+
+## Etapa 1
+- README inicial con problema, población, hipótesis H1 a H5 con su parámetro, criterios de éxito y límites.
+- Aprobada por el estudiante la frecuencia por actividad en lugar de los cuatro perfiles.

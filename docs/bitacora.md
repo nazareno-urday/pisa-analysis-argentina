@@ -6,7 +6,7 @@
 | --- | --- |
 | Diseño Plan A: PISA 2025 como fuente única para IA, contexto y rendimiento | Aprobada (el estudiante aprobó el plan A con datasets PISA) |
 | Usar UNICEF Kids Online como contexto, sin cruzarlo con PISA | Aprobada como contexto; uso concreto pendiente |
-| Analizar frecuencia de uso por actividad en lugar de los cuatro perfiles originales | Propuesta |
+| Analizar frecuencia de uso por actividad en lugar de los cuatro perfiles originales | Aprobada |
 | Excluir `data/` del repositorio | Aprobada y aplicada |
 
 ### Hechos y fuentes
@@ -18,3 +18,12 @@
 
 ### Cambios de alcance
 - Ninguno todavía.
+
+## 13/11/2026 · Etapa 1
+
+| Decisión | Estado |
+| --- | --- |
+| Rendimiento principal: ciencias (dominio principal elegido); matemática y lectura como complemento | Propuesta |
+| Hipótesis H1 a H5 con parámetros definidos (ver README) | Propuesta |
+| Hallazgos inesperados se registran como hipótesis complementarias exploratorias | Aprobada |
+| Avanzar a las etapas siguientes sin esperar revisión entre una y otra | Aprobada por el estudiante |
