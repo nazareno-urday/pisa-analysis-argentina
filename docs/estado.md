@@ -1,7 +1,7 @@
 # Estado del proyecto
 
 **Última actualización:** 13/11/2026
-**Etapa actual:** 3 (Preparación) terminada; en curso 4 (Análisis)
+**Etapa actual:** 4 (Análisis) terminada; en revisión independiente
 **Etapa 0:** aprobada y publicada (push 13/11/2026)
 
 ## Hecho
@@ -35,3 +35,9 @@
 - `notebooks/02_preparacion.ipynb`; conjunto analítico en `data/processed/` (no versionado); tablas en `reports/tables/`.
 - Muestras: 9.808 con ESCS; 7.475 con las 4 preguntas de IA; 7.191 con ESCS y las 4 preguntas de IA (64,8 %).
 - Quienes no respondieron IA rinden menos (ciencias ponderado 355 contra 418) y tienen menor ESCS: los resultados de IA describen a quienes respondieron. Candidata a hipótesis complementaria HC1.
+
+## Etapa 4
+- `notebooks/03_exploracion_e_hipotesis.ipynb`; tabla completa en `reports/tables/03_resultados_hipotesis.csv`; figuras `03_*` en `reports/figures/`.
+- Inferencia con peso final, 80 pesos replicados (divisor 20, factor de Fay 0,5 sin confirmar) y 10 valores plausibles con reglas de Rubin.
+- H1: +30,6 puntos de ciencias por unidad de ESCS; H2: mayor uso frecuente de IA en el cuartil de ESCS más alto; H3: uso frecuente de IA asociado a más puntaje en investigar, ayudar a aprender y resumir; H4: +4,0 puntos por punto de frecuencia ajustado (+9,5 sin ajustar); H5: evidencia insuficiente; HC1 (complementaria): quienes no contestaron IA tienen 62,7 puntos menos de ciencias (53,8 ajustado por ESCS).
+- Pendiente: validar la inferencia contra otro software y confirmar el factor de Fay.

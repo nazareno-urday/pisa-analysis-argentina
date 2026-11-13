@@ -44,3 +44,13 @@
 | Grupos de frecuencia de IA: nunca / a veces (2-3) / seguido (4-5) | Propuesta |
 | Cuartiles de ESCS ponderados con el peso final, relativos a Argentina | Propuesta |
 | Registrar el faltante de IA como hipótesis complementaria HC1 | Propuesta |
+
+## 13/11/2026 · Etapa 4
+
+| Decisión | Estado |
+| --- | --- |
+| Muestra para H2 a H5: estudiantes con ESCS y las cuatro preguntas de IA (7.191) | Propuesta |
+| Controles de H4: ESCS, sexo (`MALE`) y grado | Propuesta |
+| Corrección de Bonferroni informada solo para las 8 comparaciones de H3 | Propuesta |
+| HC1 (no contestar IA y rendimiento) como hipótesis complementaria exploratoria | Propuesta |
+| Los cuartiles de ESCS se fijan con el peso final y no se recalculan con cada réplica | Simplificación a revisar |
