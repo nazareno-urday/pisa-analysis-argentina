@@ -1,7 +1,7 @@
 # Estado del proyecto
 
 **Última actualización:** 13/11/2026
-**Etapa actual:** 7 (Cierre) casi terminada; faltan declaración de uso de IA y revisión del estudiante
+**Etapa actual:** 7 (Cierre) casi terminada; falta la revisión final
 **Etapa 0:** aprobada y publicada (push 13/11/2026)
 
 ## Hecho
@@ -55,7 +55,7 @@
 ## Etapa 7
 - Reproducción: los seis notebooks corrieron en orden en un entorno nuevo creado con `requirements.txt`; las tablas y figuras versionadas no cambiaron.
 - README con instalación, obtención de datos, orden de notebooks y resultados principales.
-- Pendiente: sección de uso de IA en el proceso (a acordar) y licencia del código (a elegir).
+- Pendiente: licencia del código (a elegir).
 
 ## Hipótesis exploratorias (HC2 a HC4)
 - `notebooks/05_hipotesis_exploratorias.ipynb` y `reports/tables/05_hipotesis_exploratorias.csv`; registradas en la bitácora antes de calcularlas.

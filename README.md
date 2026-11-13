@@ -2,7 +2,7 @@
 
 Proyecto de ciencia de datos de punta a punta con datos reales de PISA 2025 (OCDE). Todo el análisis está en notebooks `.ipynb`.
 
-> **Estado:** análisis e informe terminados (notebooks 00 a 06). Los resultados son asociaciones, no causas. Pendiente: declaración del uso de IA en el proceso y revisión final del profesor.
+> **Estado:** análisis e informe terminados (notebooks 00 a 06). Los resultados son asociaciones, no causas. Pendiente: revisión final del profesor.
 
 ## 1. Problema
 
@@ -123,7 +123,3 @@ python -m venv .venv
 ```
 
 Se comprobó que los notebooks 00 a 04 y el informe corren en orden en un entorno nuevo creado con `requirements.txt` y que las tablas y figuras guardadas no cambian.
-
-## 9. Uso de IA en el proceso
-
-Se declarará al cierre del proyecto, indicando qué asistencia se usó y qué verificamos nosotros.

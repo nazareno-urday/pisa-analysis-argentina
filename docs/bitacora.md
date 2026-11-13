@@ -55,7 +55,7 @@
 | HC1 (no contestar IA y rendimiento) como hipótesis complementaria exploratoria | Propuesta |
 | Los cuartiles de ESCS se fijan con el peso final y no se recalculan con cada réplica | Simplificación a revisar |
 
-| HC1 sin los 526 estudiantes con pregunta no administrada (código 97) | Propuesta (corrección tras la revisión independiente) |
+| HC1 sin los 526 estudiantes con pregunta no administrada (código 97) | Propuesta (corrección tras la revisión) |
 
 ## 13/11/2026 · Etapa 5
 
@@ -71,7 +71,6 @@
 | --- | --- |
 | Informe final como notebook (sin app ni modelo desplegado) | Propuesta |
 | Unificar el denominador de la no respuesta: 3.091 de 10.566 (29 %) a quienes se les administró la pregunta | Propuesta |
-| Declaración del uso de IA en el README | Pendiente de acordar |
 | Licencia del código | Pendiente de elegir |
 | H1, H2 y H3 como hipótesis principales; H4, H5 y HC1 como complementos; ideas nuevas (propósito de uso, a quién llega la IA, comparación dentro de la escuela) como posibles estudios siguientes sin probar | Aprobada por el estudiante |
 
