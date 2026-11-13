@@ -14,4 +14,5 @@ Consulta: 13/11/2026. Lo que no se pudo confirmar en una página oficial figura 
 - Los datos y los PDF no se publican en el repositorio (`data/` está excluido).
 - De UNICEF solo se citan cifras breves con su fuente; no se reproducen tablas ni gráficos.
 - Antes de publicar se debe verificar y citar la atribución exigida por la OCDE. Hasta entonces la atribución es institución, ciclo, archivo, enlace y fecha de consulta.
-- Las cifras de prensa sobre uso de chatbots (41 % y 52 %) no coinciden entre sí y no se usan como resultados propios.
+- Las cifras de prensa sobre uso de chatbots en Argentina (41 % según un informe del BID, 52 % según una nota de Chequeado) no coinciden entre sí y no se usan como resultados propios. No se verificaron contra el informe de la OCDE. Fuentes: https://publications.iadb.org/publications/spanish/document/PISA-en-America-Latina-y-el-Caribe-2025-Como-usan-la-IA-los-estudiantes-de-America-Latina-y-que-tan-preparadas-estan-sus-escuelas.pdf y https://chequeado.com/nota/pruebas-pisa-2025-el-52-de-los-estudiantes-argentinos-usa-chatbots-de-ia-para-aprender
+- Integridad de los zip: tamaño exacto coincidente con el informado por el servidor y `unzip -t` sin errores (incluye verificación de CRC).

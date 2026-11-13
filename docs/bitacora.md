@@ -11,7 +11,8 @@
 
 ### Hechos y fuentes
 - Archivos y tamaños: ver `docs/fuentes_y_licencias.md`.
-- Descarga del archivo de estudiantes de 2025 en tramos paralelos por la limitación de velocidad por conexión del servidor; integridad comprobada por tamaño exacto y prueba del zip.
+- Descarga del archivo de estudiantes de 2025 en tramos paralelos: con una sola conexión se medían unos 160 KB/s y en paralelo unos 1.300 KB/s. Integridad comprobada por tamaño exacto y `unzip -t` sin errores.
+- Lectura de los datos: los códigos de faltante 95 a 99 se convierten en NaN; en la Etapa 1 se leerán conservándolos.
 - Preguntas de IA de PISA 2025 (codebook, hoja `STU`): `ST438Q01DA` a `ST438Q04DA`, `IC170Q10DA`, `IC171Q10DA`, `AIUSESCH`.
 - Cifras de Argentina: ver `notebooks/00_viabilidad_y_fuentes.ipynb`.
 
