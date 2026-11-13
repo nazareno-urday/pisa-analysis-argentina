@@ -1,7 +1,7 @@
 # Estado del proyecto
 
 **Última actualización:** 13/11/2026
-**Etapa actual:** 2 (Comprensión) terminada; en curso 3 (Preparación)
+**Etapa actual:** 3 (Preparación) terminada; en curso 4 (Análisis)
 **Etapa 0:** aprobada y publicada (push 13/11/2026)
 
 ## Hecho
@@ -30,3 +30,8 @@
 - Preguntas de IA en Argentina (de 11.092): respondieron las cuatro 7.475, ninguna 3.141, algunas 476. Faltantes: código 99 (sin respuesta) entre 2.690 y 2.894 por pregunta; código 97 (no administrado) 526; sin código 95.
 - ESCS: 1.284 estudiantes con código 97 (no administrado); 9.808 válidos.
 - Sexo: `ST004D01T` viene con código 99 para todo Argentina; se usa `MALE`.
+
+## Etapa 3
+- `notebooks/02_preparacion.ipynb`; conjunto analítico en `data/processed/` (no versionado); tablas en `reports/tables/`.
+- Muestras: 9.808 con ESCS; 7.475 con las 4 preguntas de IA; 7.191 con ESCS y las 4 preguntas de IA (64,8 %).
+- Quienes no respondieron IA rinden menos (ciencias ponderado 355 contra 418) y tienen menor ESCS: los resultados de IA describen a quienes respondieron. Candidata a hipótesis complementaria HC1.

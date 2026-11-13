@@ -35,3 +35,12 @@
 | Leer los datos conservando los códigos de faltante | Aprobada y aplicada |
 | Usar `MALE` como variable de sexo (la original no tiene datos en Argentina) | Propuesta |
 | Tratar los códigos 95 o más como faltante en ESCS y en las variables de IA | Propuesta (se aplica en la Etapa 3) |
+
+## 13/11/2026 · Etapa 3
+
+| Decisión | Estado |
+| --- | --- |
+| No imputar ESCS, IA ni rendimiento | Aprobada (regla del proyecto) |
+| Grupos de frecuencia de IA: nunca / a veces (2-3) / seguido (4-5) | Propuesta |
+| Cuartiles de ESCS ponderados con el peso final, relativos a Argentina | Propuesta |
+| Registrar el faltante de IA como hipótesis complementaria HC1 | Propuesta |
