@@ -54,3 +54,5 @@
 | Corrección de Bonferroni informada solo para las 8 comparaciones de H3 | Propuesta |
 | HC1 (no contestar IA y rendimiento) como hipótesis complementaria exploratoria | Propuesta |
 | Los cuartiles de ESCS se fijan con el peso final y no se recalculan con cada réplica | Simplificación a revisar |
+
+| HC1 sin los 526 estudiantes con pregunta no administrada (código 97) | Propuesta (corrección tras la revisión independiente) |
