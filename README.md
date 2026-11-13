@@ -123,3 +123,5 @@ python -m venv .venv
 .venv\Scripts\python -m jupyter lab
 ```
 
+Se comprobó que los notebooks 00 a 07 corren en orden en un entorno nuevo creado con `requirements.txt` y que las tablas y figuras guardadas no cambian.
+
