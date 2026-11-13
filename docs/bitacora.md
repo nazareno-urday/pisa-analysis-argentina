@@ -73,3 +73,4 @@
 | Unificar el denominador de la no respuesta: 3.091 de 10.566 (29 %) a quienes se les administró la pregunta | Propuesta |
 | Declaración del uso de IA en el README | Pendiente de acordar |
 | Licencia del código | Pendiente de elegir |
+| H1, H2 y H3 como hipótesis principales; H4, H5 y HC1 como complementos; ideas nuevas (propósito de uso, a quién llega la IA, comparación dentro de la escuela) como posibles estudios siguientes sin probar | Aprobada por el estudiante |
