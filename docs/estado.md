@@ -1,7 +1,7 @@
 # Estado del proyecto
 
 **Última actualización:** 13/11/2026
-**Etapa actual:** 4 (Análisis) terminada y revisada; falta informe final y reproducción limpia
+**Etapa actual:** 5 (Evaluación) terminada; en curso 6 (Informe final)
 **Etapa 0:** aprobada y publicada (push 13/11/2026)
 
 ## Hecho
@@ -42,3 +42,9 @@
 - H1: +30,6 puntos de ciencias por unidad de ESCS; H2: mayor uso frecuente de IA en el cuartil de ESCS más alto; H3: uso frecuente de IA asociado a más puntaje en investigar, ayudar a aprender y resumir; H4: +4,0 puntos por punto de frecuencia ajustado (+9,5 sin ajustar); H5: evidencia insuficiente; HC1 (complementaria): quienes no contestaron IA tienen 66,0 puntos menos de ciencias (53,8 ajustado por ESCS), sin contar a los 526 con pregunta no administrada.
 - Validación: una implementación independiente (otro código, mismos datos) reprodujo la pendiente de ESCS, el contraste entre cuartiles, el coeficiente de IA ajustado y la diferencia de HC1 original con coincidencia dentro de 0,01. No se contrastó contra software estadístico de terceros (R `intsvy` o `Rrepest`).
 - Pendiente: confirmar el factor de Fay (0,5) en la documentación técnica de PISA 2025. Los cortes de los cuartiles de ESCS son fijos entre réplicas (práctica habitual, pero no incluye su variabilidad en el error estándar).
+
+## Etapa 5
+- `notebooks/04_sensibilidad_y_evaluacion.ipynb`, `reports/tables/04_sensibilidad.csv`, `reports/figures/04_sensibilidad.png`.
+- Variantes: otras áreas, otras medidas de IA, otros controles y contraste más estricto. El signo y el patrón por actividad se mantienen; el tamaño depende de los controles (+9,5 sin controles, +5,0 con ESCS, +4,0 con ESCS, sexo y grado).
+- Decisión: continuar con el informe final comunicando que valen para quienes contestaron, que el tamaño es modesto y que no son causales.
+- No se incluyó un componente predictivo (no fue acordado), por eso el notebook 04 es de sensibilidad y no de modelado.

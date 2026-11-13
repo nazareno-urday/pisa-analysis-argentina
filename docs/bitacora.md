@@ -56,3 +56,11 @@
 | Los cuartiles de ESCS se fijan con el peso final y no se recalculan con cada réplica | Simplificación a revisar |
 
 | HC1 sin los 526 estudiantes con pregunta no administrada (código 97) | Propuesta (corrección tras la revisión independiente) |
+
+## 13/11/2026 · Etapa 5
+
+| Decisión | Estado |
+| --- | --- |
+| Pocas variantes de sensibilidad decididas de antemano (área, medida de IA, controles, contraste estricto) | Propuesta |
+| No incluir componente predictivo; el notebook 04 es de sensibilidad | Propuesta |
+| Continuar con el informe final | Propuesta |
