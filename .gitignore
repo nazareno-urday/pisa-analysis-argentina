@@ -223,7 +223,6 @@ __marimo__/
 docs/referencia/
 
 # Contexto local de trabajo (no se versiona)
-PROMPT_MAESTRO_PISA_IA.md
 
 # Datos (no se versionan)
 data/raw/

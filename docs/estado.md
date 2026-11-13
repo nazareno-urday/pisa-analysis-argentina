@@ -50,7 +50,7 @@
 - No se incluyó un componente predictivo (no fue acordado), por eso el notebook 04 es de sensibilidad y no de modelado.
 
 ## Etapa 6
-- `notebooks/07_informe_final.ipynb`, revisado contra las tablas por un revisor independiente; se corrigieron denominadores (29 % de quienes recibieron la pregunta), mezcla de resultados ajustados y no ajustados y redacción para docentes.
+- `notebooks/07_informe_final.ipynb`, revisado contra las tablas; se corrigieron denominadores (29 % de quienes recibieron la pregunta), mezcla de resultados ajustados y no ajustados y redacción para docentes.
 
 ## Etapa 7
 - Reproducción: los seis notebooks corrieron en orden en un entorno nuevo creado con `requirements.txt`; las tablas y figuras versionadas no cambiaron.
