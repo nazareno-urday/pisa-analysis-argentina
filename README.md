@@ -2,7 +2,7 @@
 
 Proyecto de ciencia de datos de punta a punta con datos reales de PISA 2025 (OCDE). Todo el análisis está en notebooks `.ipynb`.
 
-> **Estado:** análisis e informe terminados (notebooks 00 a 05). Los resultados son asociaciones, no causas. Pendiente: declaración del uso de IA en el proceso y revisión final del profesor.
+> **Estado:** análisis e informe terminados (notebooks 00 a 06). Los resultados son asociaciones, no causas. Pendiente: declaración del uso de IA en el proceso y revisión final del profesor.
 
 ## 1. Problema
 
