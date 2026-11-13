@@ -2,7 +2,7 @@
 
 Proyecto de ciencia de datos de punta a punta con datos reales de PISA 2025 (OCDE). Todo el análisis está en notebooks `.ipynb`.
 
-> **Estado:** análisis e informe terminados (notebooks 00 a 06). Los resultados son asociaciones, no causas. Pendiente: revisión final del profesor.
+> **Estado:** análisis e informe terminados (notebooks 00 a 07). Los resultados son asociaciones, no causas. Pendiente: revisión final del profesor.
 
 ## 1. Problema
 
@@ -64,7 +64,7 @@ No se exige que los resultados sean estadísticamente significativos.
 
 ## Resultados principales
 
-Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb`, `notebooks/05_hipotesis_exploratorias.ipynb`, `notebooks/06_informe_final.ipynb` y `reports/tables/`. Todo con pesos de PISA, 80 réplicas y 10 valores plausibles.
+Detalle, intervalos y figuras en `notebooks/03_exploracion_e_hipotesis.ipynb`, `notebooks/05_hipotesis_exploratorias.ipynb`, `notebooks/06_graficos_presentacion.ipynb`, `notebooks/07_informe_final.ipynb` y `reports/tables/`. Todo con pesos de PISA, 80 réplicas y 10 valores plausibles.
 
 **Hipótesis principales**
 - **H1:** el ESCS se asocia con el rendimiento: +30,6 puntos de ciencias por unidad de ESCS; el cuartil más alto supera al más bajo en 82,4 puntos.
@@ -116,10 +116,11 @@ python -m venv .venv
 | 4 | `03_exploracion_e_hipotesis.ipynb` | Pruebas de H1 a H5 y HC1 |
 | 5 | `04_sensibilidad_y_evaluacion.ipynb` | Pruebas de sensibilidad |
 | 6 | `05_hipotesis_exploratorias.ipynb` | Hipótesis exploratorias HC2 a HC4 |
-| 7 | `06_informe_final.ipynb` | Informe final |
+| 7 | `06_graficos_presentacion.ipynb` | Gráficos para la presentación |
+| 8 | `07_informe_final.ipynb` | Informe final |
 
 ```powershell
 .venv\Scripts\python -m jupyter lab
 ```
 
-Se comprobó que los notebooks 00 a 04 y el informe corren en orden en un entorno nuevo creado con `requirements.txt` y que las tablas y figuras guardadas no cambian.
+Se comprobó que los notebooks 00 a 07 corren en orden en un entorno nuevo creado con `requirements.txt` y que las tablas y figuras guardadas no cambian.
