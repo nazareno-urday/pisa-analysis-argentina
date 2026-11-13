@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+docs/referencia/
+
+# Contexto local de trabajo (no se versiona)
+PROMPT_MAESTRO_PISA_IA.md
