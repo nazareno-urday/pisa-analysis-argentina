@@ -121,7 +121,7 @@ def m(f):
 
 
 f = buscar(t05, "HC2", "Índice de tipo de uso"); L.append(renglon(r"\quad HC2. Índice $T$, $Q_4-Q_1$ de ESCS", f, 3, marca=m(f)))
-f = buscar(t05, "HC3", "Proporción que usa IA"); L.append(renglon(r"\quad HC3. Uso frecuente, $Q_4-Q_1$ de ciencias (p.p.)", f, 1, factor=100, marca=m(f)))
+f = buscar(t05, "HC3", "Proporción que usa IA"); L.append(renglon(r"\quad HC3. Uso frecuente (p.p.), $Q_4-Q_1$ ciencias", f, 1, factor=100, marca=m(f)))
 f = buscar(t05, "HC3", "Frecuencia promedio"); L.append(renglon(r"\quad HC3. Frecuencia media, $Q_4-Q_1$ de ciencias", f, 3, marca=m(f)))
 f = buscar(t05, "HC4", "ESCS sobre frecuencia de IA, total"); L.append(renglon(r"\quad HC4. Pendiente ESCS $\to$ IA, total", f, 3, marca=m(f)))
 f = buscar(t05, "HC4", "ESCS sobre frecuencia de IA, dentro"); L.append(renglon(r"\quad HC4. Pendiente ESCS $\to$ IA, intraescuela", f, 3, marca=m(f)))
