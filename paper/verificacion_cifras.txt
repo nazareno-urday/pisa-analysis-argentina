@@ -1,0 +1,49 @@
+CONTROL DE COHERENCIA DE CIFRAS (generado por paper/tablas.py)
+Fuente: reports/tables/03_resultados_hipotesis.csv, 04_sensibilidad.csv, 05_hipotesis_exploratorias.csv
+
+1) IC 95 % y p recalculados desde estimación y error estándar redondeados
+   filas revisadas: 46
+   mayor discrepancia en límites de IC: 0.0018 (tolerancia 0,003 por redondeo)
+   mayor discrepancia en |z| implícito, como fracción de la cota de redondeo: 0.89 (debe ser <= 1)
+   resultado: COHERENTE
+
+2) Cocientes derivados que cita el texto (aritmética sobre estimaciones puntuales)
+   H4 reducción al ajustar por ESCS: 47.1 %
+   H4 reducción al ajustar por ESCS, sexo y grado: 57.5 %
+   HC4 cociente intraescuela/total: 43.2 %; cota inferior de la parte entre escuelas: 56.8 %
+   H3 Investigar un tema: 28.4 puntos = 35 % de la brecha Q4-Q1 de ESCS (82.4)
+   H3 Ayudar a aprender: 26.6 puntos = 32 % de la brecha Q4-Q1 de ESCS (82.4)
+   H3 Resumir un texto: 18.8 puntos = 23 % de la brecha Q4-Q1 de ESCS (82.4)
+   H3 Redactar borradores: 7.1 puntos = 9 % de la brecha Q4-Q1 de ESCS (82.4)
+   H4 ajustado x 4 puntos de escala: 16.1 puntos = 20 % de la brecha Q4-Q1
+   HC1 sin ajustar / brecha Q4-Q1: 80 %
+   No respuesta: 3091/10566 = 29.25 %; 3617/11092 = 32.61 %; 3141/11092 = 28.32 %
+   Casos completos: 7191/11092 = 64.83 %; ESCS válido 9808/11092 = 88.42 %
+   Usó IA alguna vez: 6608/7191 = 91.9 %; semanal o diario en alguna: 4674/7191 = 65.0 % (sin ponderar)
+
+3) Lectura adicional de multiplicidad (sobre los p ya publicados; no son estimaciones nuevas)
+   Familia H4 (6 estimaciones), umbral 0,05/6 = 0.00833: superan 4 de 6
+      p = 6.30e-03  supera  | Coeficiente de la frecuencia de IA (promedio 1 a 5), ajustado (puntos 
+      p = 9.73e-09  supera  | Coeficiente de la frecuencia de IA (promedio 1 a 5), sin ajustar
+      p = 1.63e-01  no supera  | Resumir un texto: coeficiente ajustado (puntos por punto de frecuencia
+      p = 9.75e-05  supera  | Investigar un tema: coeficiente ajustado (puntos por punto de frecuenc
+      p = 6.07e-01  no supera  | Redactar borradores: coeficiente ajustado (puntos por punto de frecuen
+      p = 3.06e-06  supera  | Ayudar a aprender: coeficiente ajustado (puntos por punto de frecuenci
+   Todas las estimaciones informadas (46), umbral 0,05/46 = 0.00109: superan 25
+   Con p < 0,05 pero sin superar el umbral global:
+      p = 0.0063 | H4 | Coeficiente de la frecuencia de IA (promedio 1 a 5), ajustado (puntos 
+      p = 0.0026 | H5 | Coeficiente de IA con ESCS promedio (modelo con interacción)
+      p = 0.0063 | A. Área | Ciencias (base)
+      p = 0.0097 | A. Área | Lectura
+      p = 0.0295 | B. Medida de IA | Índice AIUSESCH (puntos por unidad del índice)
+      p = 0.0031 | B. Medida de IA | Promedio de las preguntas contestadas (incluye parciales)
+      p = 0.0063 | C. Controles | ESCS, sexo y grado (base)
+      p = 0.0214 | D. Contraste estricto | Resumir un texto: todos los días menos nunca (puntos de ciencias)
+      p = 0.0027 | D. Contraste estricto | Investigar un tema: todos los días menos nunca (puntos de ciencias)
+      p = 0.0036 | HC4 | ESCS sobre frecuencia de IA, dentro de escuela
+
+4) Sensibilidad a la distribución de referencia: t de Student con 80 grados de libertad en lugar de normal
+   valor crítico t(80; 0,975) = 1.990; veredictos a 0,05 que cambian: 0
+   H4 ajustado: p_normal = 0.00630; p_t80 = 0.00774; umbral 0.05000: supera
+   HC4 intraescuela: p_normal = 0.00361; p_t80 = 0.00545; umbral 0.01667: supera
+   H3 resumir (frecuente): p_normal = 0.00008; p_t80 = 0.00017; umbral 0.00625: supera
