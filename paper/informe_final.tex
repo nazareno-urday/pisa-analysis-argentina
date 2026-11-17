@@ -57,6 +57,8 @@
 % ---------- Macros ----------
 \newcommand{\var}[1]{\texttt{#1}}
 \newcommand{\nb}[1]{\texttt{\small notebooks/#1}}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{explica}{colback=azul!6,colframe=azul,boxrule=0pt,leftrule=2.2pt,arc=0pt,left=6pt,right=6pt,top=4pt,bottom=4pt,fontupper=\small}
 \newcommand{\arch}[1]{\texttt{\small #1}}
 \newcommand{\E}{\operatorname{E}}
 \newcommand{\V}{\widehat{V}}
@@ -140,17 +142,33 @@ PISA~2025 permite por fin mirar el problema con datos representativos. Su cuesti
 \V_m&=\frac{1}{G(1-k)^2}\sum_{g=1}^{G}\bigl(\hat\theta(\bm{w}^{(g)},m)-\hat\theta(\bm{w},m)\bigr)^2, \label{eq:fay}\\
 \V(\hat\theta)&=\frac1M\sum_{m=1}^{M}\V_m+\Bigl(1+\frac1M\Bigr)\frac{1}{M-1}\sum_{m=1}^{M}\bigl(\hat\theta(\bm{w},m)-\hat\theta\bigr)^2, \label{eq:var}
 \end{align}
-con $\hat\theta=\tfrac1M\sum_m\hat\theta(\bm{w},m)$. Se usó $k=0{,}5$, el valor documentado por la OCDE para ciclos anteriores \parencite{oecd2009manual}; la documentación técnica de 2025 es provisional y no permitió confirmarlo. Las estimaciones puntuales no dependen de $k$. Los intervalos son $\hat\theta\pm1{,}96\,\ee(\hat\theta)$ y los valores $p$ bilaterales usan la referencia normal.
+con $\hat\theta=\tfrac1M\sum_m\hat\theta(\bm{w},m)$.
+
+\begin{explica}
+\textbf{En palabras simples.} Para saber cuánto puede equivocarse una cifra, se la calcula muchas veces. La primera fórmula repite el cálculo con 80 versiones levemente distintas de la muestra (los pesos replicados) y mide cuánto se mueve el resultado: si casi no se mueve, la cifra es precisa. La segunda suma a esa imprecisión la que viene de que PISA da diez puntajes posibles por estudiante en lugar de uno. Con eso se construyen los intervalos de confianza: el rango donde razonablemente está el valor verdadero.
+\end{explica}
+
+\noindent Se usó $k=0{,}5$, el valor documentado por la OCDE para ciclos anteriores \parencite{oecd2009manual}; la documentación técnica de 2025 es provisional y no permitió confirmarlo. Las estimaciones puntuales no dependen de $k$. Los intervalos son $\hat\theta\pm1{,}96\,\ee(\hat\theta)$ y los valores $p$ bilaterales usan la referencia normal.
 
 \paragraph{Modelos.} La asociación condicional entre IA y rendimiento (H4) y su variación con el ESCS (H5) se estiman con
 \begin{equation}\label{eq:h4}
 Y_i=\beta_0+\beta_A \bar A_i+\beta_E\,\text{ESCS}_i+\beta_S\,\text{sexo}_i+\beta_D\,\text{grado}_i\;\bigl[+\beta_{AE}\,\bar A_i\times\text{ESCS}_i\bigr]+\varepsilon_i ,
 \end{equation}
-con las variables centradas cuando se incluye la interacción. Para HC4 se compara la pendiente de $\bar A$ sobre el ESCS en el total ($b_T$) con la pendiente dentro de la escuela ($b_W$), obtenida restando a cada variable la media ponderada de su escuela. Ambas cumplen la identidad
+con las variables centradas cuando se incluye la interacción.
+
+\begin{explica}
+\textbf{En palabras simples.} El puntaje de un estudiante ($Y$) se explica con su frecuencia de uso de IA ($\bar A$) \emph{y a la vez} con su nivel socioeconómico, su sexo y su año. El número que importa es $\beta_A$: cuántos puntos más tiene, en promedio, quien usa IA un escalón más seguido, \emph{comparando estudiantes iguales en esas otras tres cosas}. Eso es lo que se llama \enquote{ajustar}. La parte entre corchetes pregunta si ese número cambia según el nivel socioeconómico.
+\end{explica}
+
+\noindent Para HC4 se compara la pendiente de $\bar A$ sobre el ESCS en el total ($b_T$) con la pendiente dentro de la escuela ($b_W$), obtenida restando a cada variable la media ponderada de su escuela. Ambas cumplen la identidad
 \begin{equation}\label{eq:descomp}
 b_T=\rho\,b_B+(1-\rho)\,b_W,\qquad 0\le\rho\le1,
 \end{equation}
 donde $b_B$ es la pendiente entre medias de escuela y $\rho$ la fracción de la variabilidad del ESCS que ocurre entre escuelas. De~\eqref{eq:descomp} se sigue que la parte de $b_T$ debida al componente entre escuelas es al menos $1-b_W/b_T$.
+
+\begin{explica}
+\textbf{En palabras simples.} La brecha de uso entre chicos ricos y pobres tiene dos partes: la que aparece entre compañeros de una misma escuela ($b_W$) y la que aparece porque unas escuelas tienen más chicos de un nivel que otras ($b_B$). Si dentro de la escuela la brecha es solo el 43\,\% de la total ($0{,}080$ sobre $0{,}185$), el resto, al menos el 57\,\%, viene de las diferencias \emph{entre} escuelas.
+\end{explica}
 
 \paragraph{Decisión.} Un resultado se considera \emph{compatible con una asociación} si $p<\alpha$; en caso contrario, la evidencia es \emph{insuficiente}, lo que no equivale a ausencia de asociación. Se usa $\alpha=0{,}05$, con corrección de Bonferroni en los ocho contrastes de H3 ($p<0{,}00625$) y en las tres hipótesis HC2--HC4 ($p<0{,}0167$). Como referencia de magnitud, las diferencias se comparan con la brecha de 82,4 puntos entre cuartiles extremos de ESCS.
 
