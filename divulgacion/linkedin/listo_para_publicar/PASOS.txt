@@ -1,0 +1,39 @@
+CÓMO PUBLICAR EN LINKEDIN (en este orden)
+
+──────────────────────────────────────────
+POST 1 · EL INFORME FINAL  (carpeta 1_post_informe)
+──────────────────────────────────────────
+1. En LinkedIn tocá "Empezar una publicación".
+2. Tocá "+" (más opciones) y elegí "Agregar un documento".
+3. Subí el archivo: Informe_final_Mas_brecha_que_efecto_PISA2025.pdf
+4. Cuando te pida el título del documento, escribí:
+   Informe final: Más brecha que efecto (PISA 2025)
+5. Pegá el texto de texto_post_informe.txt.
+6. En la línea de autores, borrá los nombres de Juan Ignacio y Matias y volvé
+   a escribirlos con "@" adelante (@Juan Ignacio Cordero, @Matias Sanchez),
+   eligiéndolos de la lista que aparece. Así quedan etiquetados.
+7. Tocá "Publicar".
+8. En el post ya publicado, tocá los tres puntitos (···) de arriba a la derecha
+   y elegí "Copiar enlace a la publicación". Guardá ese link.
+
+──────────────────────────────────────────
+POST 2 · EL POST PRINCIPAL  (carpeta 2_post_principal)
+──────────────────────────────────────────
+1. Tocá "Empezar una publicación".
+2. Tocá el ícono de foto / multimedia y seleccioná las 5 imágenes EN ORDEN:
+   1_portada → 2_dos_aulas → 3_la_ventaja_se_desinfla → 4_los_invisibles → 5_conclusion
+   (si quedan desordenadas, LinkedIn deja reordenarlas antes de publicar).
+3. Pegá el texto de texto_post_principal.txt.
+4. Reemplazá [PEGAR ACÁ EL LINK DEL POST DEL INFORME] por el link que copiaste
+   en el paso 8 del Post 1.
+5. Etiquetá a Juan Ignacio y Matias con "@" en la línea de autores, igual que antes.
+6. Tocá "Publicar".
+
+──────────────────────────────────────────
+DESPUÉS DE PUBLICAR
+──────────────────────────────────────────
+- En tu perfil, agregá el Post 1 (el informe) a la sección "Destacado",
+  así queda fijo arriba de todo.
+- Pediles a Juan Ignacio y Matias que comenten o compartan el Post 2
+  durante la primera hora: eso hace que LinkedIn lo muestre a más gente.
+- Respondé los comentarios que lleguen.
