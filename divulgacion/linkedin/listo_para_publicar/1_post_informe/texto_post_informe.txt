@@ -1,11 +1,9 @@
-📄 Informe final | Más brecha que efecto
+📄 Más brecha que efecto: IA y desigualdad educativa en Argentina
 
-Nivel socioeconómico, uso de chatbots de inteligencia artificial y rendimiento escolar en Argentina: evidencia de PISA 2025.
+Este es el estudio completo que hicimos con mis compañeros Juan Ignacio Cordero y Matias Sanchez.
 
-Analizamos los datos de 11.092 estudiantes argentinos de 15 años, de 412 escuelas, para responder una pregunta: ¿cómo se relacionan el nivel socioeconómico y el uso de inteligencia artificial con el rendimiento escolar?
+Analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años, de 412 escuelas, para responder una pregunta: ¿cómo se relacionan el nivel socioeconómico y el uso de inteligencia artificial con el rendimiento escolar?
 
-En el documento están los datos, el método, los resultados y sus límites.
-
-✍️ Autores: Nazareno Urday Quiroga, Juan Ignacio Cordero y Matias Sanchez
+Adentro están los datos, el método, los resultados y sus límites.
 
 #Educación #InteligenciaArtificial #PISA2025 #Argentina

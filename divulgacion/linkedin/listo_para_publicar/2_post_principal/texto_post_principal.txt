@@ -1,6 +1,6 @@
 ¿La inteligencia artificial mejora las notas de los estudiantes?
 
-Analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años. La pregunta de fondo resultó ser otra: quién la usa.
+Con mis compañeros Juan Ignacio Cordero y Matias Sanchez analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años. La pregunta de fondo resultó ser otra: quién la usa.
 
 La IA ya llegó a las aulas, pero no llegó igual para todos:
 
@@ -12,7 +12,6 @@ Son asociaciones, no causas. Pero dejan una pregunta abierta para escuelas y pol
 
 Los hallazgos, en 5 placas 👇
 
-📄 Informe completo: [PEGAR ACÁ EL LINK DEL POST DEL INFORME]
-✍️ Autores: Nazareno Urday Quiroga, Juan Ignacio Cordero y Matias Sanchez
+📄 Estudio completo: [PEGAR ACÁ EL LINK DEL POST DEL ESTUDIO]
 
 #Educación #InteligenciaArtificial #PISA2025 #Argentina
