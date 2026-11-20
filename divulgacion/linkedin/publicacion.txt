@@ -3,6 +3,7 @@ La inteligencia artificial ya llegó a las aulas argentinas. Pero no llegó igua
 📄 Resumen
 Analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años, de 412 escuelas. Encontramos que:
 
+→ Entre los chicos de familias con más recursos y los de familias con menos hay 82 puntos de diferencia en ciencias.
 → Los chicos de familias con más recursos usan la IA bastante más seguido, en todas las tareas que mide PISA.
 → Los que la usan más sacan mejores notas, pero esa ventaja se achica a menos de la mitad cuando comparamos chicos parecidos.
 → 3 de cada 10 estudiantes no respondieron las preguntas sobre IA, y son los que menos rinden.
