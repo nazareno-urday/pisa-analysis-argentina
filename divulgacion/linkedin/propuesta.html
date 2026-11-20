@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Propuesta de publicación</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  :root { --am:#FFE100; --ro:#E3000F; --ne:#0B0B0B; --bl:#FFFFFF; --gr:#F1F1EC; --tx:#1b1b1b; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "Inter", sans-serif; color: var(--tx); }
+  .pag { width: 297mm; height: 210mm; position: relative; overflow: hidden; page-break-after: always; background: #fff; }
+  .pag:last-child { page-break-after: auto; }
+  .D { font-family: "Inter Display", "Inter", sans-serif; font-weight: 900; }
+  .cab { background: var(--ne); color: #fff; padding: 4.2mm 12mm 4mm; display: flex; align-items: flex-end; justify-content: space-between; }
+  .cab .k { display: inline-block; background: var(--ro); font-family: "Inter Display"; font-weight: 900; font-size: 8pt; letter-spacing: 1.4px; padding: .7mm 2.2mm; margin-bottom: 1.6mm; }
+  .cab h1 { font-family: "Inter Display"; font-weight: 900; font-size: 22pt; line-height: 1; color: var(--am); text-transform: uppercase; letter-spacing: -.5px; }
+  .cab .der { text-align: right; font-size: 8.5pt; color: #cfcfcf; font-weight: 600; line-height: 1.35; }
+  .cab .der b { color: #fff; }
+  .cuerpo { padding: 6mm 12mm 0; }
+  .pie { position: absolute; left: 0; right: 0; bottom: 0; background: var(--ne); color: #cfcfcf; font-size: 7.8pt; padding: 2.8mm 12mm; line-height: 1.35; }
+  .pie b { color: var(--am); }
+
+  /* --- Página 1 --- */
+  .p1 { display: grid; grid-template-columns: 84mm 1fr; gap: 9mm; }
+  .tel { width: 84mm; border: 2.4mm solid var(--ne); border-radius: 9mm; padding: 4mm 3.2mm 3mm; background: #f3f2ef; box-shadow: 0 3mm 7mm rgba(0,0,0,.18); }
+  .tel .post { background: #fff; border-radius: 2.5mm; overflow: hidden; }
+  .tel .who { display: flex; gap: 2.4mm; align-items: center; padding: 3mm 3mm 2mm; }
+  .tel .av { width: 9mm; height: 9mm; border-radius: 50%; background: var(--ne); color: var(--am); display: flex; align-items: center; justify-content: center; font-family: "Inter Display"; font-weight: 900; font-size: 9pt; }
+  .tel .nm { font-size: 8pt; font-weight: 800; line-height: 1.15; }
+  .tel .nm span { display: block; font-weight: 500; color: #666; font-size: 6.8pt; }
+  .tel .tx { font-size: 7.2pt; line-height: 1.38; padding: 0 3mm 2.4mm; }
+  .tel .tx .mas { color: #666; font-weight: 700; }
+  .tel .doc { position: relative; }
+  .tel .doc img { width: 100%; display: block; }
+  .tel .doc .np { position: absolute; right: 2mm; top: 2mm; background: rgba(0,0,0,.7); color: #fff; font-size: 6.5pt; font-weight: 700; border-radius: 1.2mm; padding: .6mm 1.6mm; }
+  .tel .dt { background: #f7f7f7; font-size: 6.8pt; font-weight: 700; padding: 1.8mm 3mm; border-top: .3mm solid #e6e6e6; }
+  .tel .acc { display: flex; justify-content: space-around; font-size: 6.6pt; font-weight: 700; color: #555; padding: 2.2mm 0 2.4mm; border-top: .3mm solid #e6e6e6; }
+
+  .titulito { font-family: "Inter Display"; font-weight: 900; font-size: 13pt; text-transform: uppercase; letter-spacing: -.2px; }
+  .titulito span { color: var(--ro); }
+  .sub { font-size: 8.8pt; color: #555; margin-top: .8mm; line-height: 1.3; }
+  .tira { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 3.5mm; }
+  .tira figure { margin: 0; }
+  .tira img { width: 100%; display: block; border-radius: 1.2mm; box-shadow: 0 1mm 2.5mm rgba(0,0,0,.18); }
+  .tira figcaption { font-size: 7.4pt; font-weight: 700; line-height: 1.2; margin-top: 1.4mm; }
+  .tira figcaption b { color: var(--ro); }
+  .postbox { margin-top: 0; background: var(--am); border-radius: 2.5mm; padding: 3.2mm 4mm; font-size: 8.5pt; line-height: 1.35; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+  .postbox b.t { font-family: "Inter Display"; font-weight: 900; font-size: 10.5pt; display: block; margin-bottom: 1mm; }
+
+  /* --- Página 2 --- */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; margin-top: 2mm; }
+  .card { background: var(--gr); border-radius: 2.5mm; padding: 6mm 6mm; }
+  .card.n { background: var(--ne); color: #fff; }
+  .card.a { background: var(--am); }
+  .card.r { background: var(--ro); color: #fff; }
+  .card .q { font-family: "Inter Display"; font-weight: 900; font-size: 15.5pt; line-height: 1.05; text-transform: uppercase; letter-spacing: -.2px; }
+  .card.n .q { color: var(--am); }
+  .card p { font-size: 11pt; line-height: 1.42; margin-top: 3mm; }
+  .card p b { font-weight: 800; }
+  .cita { margin-top: 7mm; background: var(--ne); color: #fff; border-radius: 2.5mm; padding: 4mm 5mm; display: flex; gap: 6mm; align-items: center; }
+  .cita .q { font-family: "Inter Display"; font-weight: 900; font-size: 14pt; color: var(--am); text-transform: uppercase; white-space: nowrap; }
+  .cita p { font-size: 10pt; line-height: 1.42; }
+  .cita i { font-style: italic; }
+  .cita .lk { background: var(--am); color: var(--ne); font-weight: 800; padding: 0 1.2mm; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<!-- ======================= PÁGINA 1: LA MAQUETA ======================= -->
+<section class="pag">
+  <div class="cab">
+    <div><div class="k">PROPUESTA DE PUBLICACIÓN</div><h1>Así imaginamos la publicación</h1></div>
+    <div class="der"><b>Un post de LinkedIn con un carrusel de 7 placas</b><br>Nazareno Urday Quiroga · Juan Ignacio Cordero · Matias Sanchez</div>
+  </div>
+
+  <div class="cuerpo p1">
+    <div class="tel">
+      <div class="post">
+        <div class="who"><div class="av">NU</div><div class="nm">Nazareno Urday Quiroga<span>Ahora</span></div></div>
+        <div class="tx">La inteligencia artificial ya llegó a las aulas argentinas. Pero no llegó igual para todos.<br><br>📄 Resumen: analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años… <span class="mas">ver más</span></div>
+        <div class="doc"><img src="placas/placa-01.png" alt=""><div class="np">1 / 7</div></div>
+        <div class="dt">La IA también tiene clase social · 7 páginas</div>
+        <div class="acc"><span>Recomendar</span><span>Comentar</span><span>Compartir</span><span>Enviar</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="titulito">El carrusel: <span>una idea por placa</span></div>
+      <div class="sub">Se lee deslizando, en menos de un minuto. Cada placa responde una sola pregunta.</div>
+      <div class="tira">
+        <figure><img src="placas/placa-01.png" alt=""><figcaption><b>1.</b> Portada: el titular que frena el scroll</figcaption></figure>
+        <figure><img src="placas/placa-02.png" alt=""><figcaption><b>2.</b> La brecha de notas: 82 puntos</figcaption></figure>
+        <figure><img src="placas/placa-03.png" alt=""><figcaption><b>3.</b> Quién usa más la IA: dos aulas de 100 chicos</figcaption></figure>
+        <figure><img src="placas/placa-04.png" alt=""><figcaption><b>4.</b> ¿Te sube la nota? La ventaja se desinfla</figcaption></figure>
+        <figure><img src="placas/placa-05.png" alt=""><figcaption><b>5.</b> Los que no respondieron</figcaption></figure>
+        <figure><img src="placas/placa-06.png" alt=""><figcaption><b>6.</b> La brecha está entre escuelas</figcaption></figure>
+        <figure><img src="placas/placa-07.png" alt=""><figcaption><b>7.</b> Conclusión y link al informe</figcaption></figure>
+        <div class="postbox"><b class="t">El texto del post</b>Un resumen de los hallazgos, los autores y el link al informe final completo.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pie"><b>Fuente de los datos:</b> OCDE, PISA 2025. Análisis propio de 11.092 estudiantes argentinos de 15 años, de 412 escuelas.</div>
+</section>
+
+<!-- ======================= PÁGINA 2: FUNDAMENTACIÓN ======================= -->
+<section class="pag">
+  <div class="cab">
+    <div><div class="k">FUNDAMENTACIÓN</div><h1>¿Por qué la publicamos así?</h1></div>
+    <div class="der"><b>Público, mensaje y forma</b><br>Nazareno Urday Quiroga · Juan Ignacio Cordero · Matias Sanchez</div>
+  </div>
+
+  <div class="cuerpo">
+    <div class="grid">
+      <div class="card n">
+        <div class="q">¿Por qué LinkedIn?</div>
+        <p>Es la red donde se habla de educación, trabajo y tecnología. La leen <b>docentes, directivos y gente que trabaja en educación y en tecnología</b>. Permite subir un carrusel que se lee sin salir de la app y agregar el link al informe completo.</p>
+      </div>
+      <div class="card">
+        <div class="q">¿A quién le hablamos?</div>
+        <p>A adultos interesados en la educación, pero <b>no especialistas en estadística</b>. Leen en el celular, entre muchas otras publicaciones: tenemos pocos segundos para que se detengan y entiendan.</p>
+      </div>
+      <div class="card a">
+        <div class="q">¿Qué mensaje queremos que quede?</div>
+        <p>Una sola idea: <b>la IA llegó a la escuela argentina, pero no llegó igual para todos.</b> Y una aclaración honesta: los datos muestran qué cosas van juntas, no qué causa qué.</p>
+      </div>
+      <div class="card">
+        <div class="q">¿Por qué un carrusel de 7 placas?</div>
+        <p><b>Una idea por placa</b>, y se lee en menos de un minuto. El formato vertical ocupa toda la pantalla del celular. La portada tiene que frenar el scroll; la última lleva al informe completo.</p>
+      </div>
+      <div class="card">
+        <div class="q">¿Por qué estos gráficos?</div>
+        <p><b>Ninguno necesita saber estadística.</b> Una escalera para la brecha de notas, muñequitos para contar chicos, dos barras para mostrar cómo se achica la ventaja y personas en rojo para los que no respondieron.</p>
+      </div>
+      <div class="card r">
+        <div class="q">¿Por qué este tono?</div>
+        <p>Titular provocador y colores fuertes para llamar la atención. Pero <b>llamativo no es inventar</b>: cada cifra sale del informe, aclaramos que son asociaciones y no causas, y el detalle técnico queda en el informe completo.</p>
+      </div>
+    </div>
+
+    <div class="cita">
+      <div class="q">Informe completo</div>
+      <p>Urday Quiroga, N., Cordero, J. I. y Sanchez, M. (2026). <i>Más brecha que efecto: nivel socioeconómico, uso de chatbots de inteligencia artificial y rendimiento escolar en Argentina. Evidencia de PISA 2025</i> [Informe final]. Disponible en: <span class="lk">[LINK AL INFORME FINAL]</span><br>Datos: OCDE (2026). <i>PISA 2025 Database</i>.</p>
+    </div>
+  </div>
+
+  <div class="pie"><b>En el post:</b> el carrusel va acompañado de un resumen de los hallazgos, los nombres de los tres autores y el link al informe final.</div>
+</section>
+</body>
+</html>
