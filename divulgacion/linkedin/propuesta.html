@@ -34,6 +34,11 @@
   .tel .doc { position: relative; }
   .tel .doc img { width: 100%; display: block; }
   .tel .doc .np { position: absolute; right: 2mm; top: 2mm; background: rgba(0,0,0,.7); color: #fff; font-size: 6.5pt; font-weight: 700; border-radius: 1.2mm; padding: .6mm 1.6mm; }
+  .tel .fotos { display: flex; flex-direction: column; gap: .6mm; background: #fff; }
+  .tel .fotos img { display: block; width: 100%; }
+  .tel .fotos .g { aspect-ratio: 1 / 1; object-fit: cover; object-position: top; }
+  .tel .fotos .chicas { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6mm; }
+  .tel .fotos .chicas img { aspect-ratio: 1 / 1; object-fit: cover; object-position: top; }
   .tel .dt { background: #f7f7f7; font-size: 6.8pt; font-weight: 700; padding: 1.8mm 3mm; border-top: .3mm solid #e6e6e6; }
   .tel .acc { display: flex; justify-content: space-around; font-size: 6.6pt; font-weight: 700; color: #555; padding: 2.2mm 0 2.4mm; border-top: .3mm solid #e6e6e6; }
 
@@ -71,7 +76,7 @@
 <section class="pag">
   <div class="cab">
     <div><div class="k">PROPUESTA DE PUBLICACIÓN</div><h1>Así imaginamos la publicación</h1></div>
-    <div class="der"><b>Un post de LinkedIn con un carrusel de 5 placas</b><br>Nazareno Urday Quiroga · Juan Ignacio Cordero · Matias Sanchez</div>
+    <div class="der"><b>Un post de LinkedIn con 5 imágenes</b><br>Nazareno Urday Quiroga · Juan Ignacio Cordero · Matias Sanchez</div>
   </div>
 
   <div class="cuerpo p1">
@@ -79,15 +84,17 @@
       <div class="post">
         <div class="who"><div class="av">NU</div><div class="nm">Nazareno Urday Quiroga<span>Ahora</span></div></div>
         <div class="tx"><b>¿La inteligencia artificial mejora las notas de los estudiantes?</b><br><br>Analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años. La pregunta de fondo resultó ser otra… <span class="mas">ver más</span></div>
-        <div class="doc"><img src="placas/placa-01.png" alt=""><div class="np">1 / 5</div></div>
-        <div class="dt">La IA también tiene clase social · 5 páginas</div>
+        <div class="fotos">
+          <img class="g" src="placas/placa-01.png" alt="">
+          <div class="chicas"><img src="placas/placa-02.png" alt=""><img src="placas/placa-03.png" alt=""><img src="placas/placa-04.png" alt=""><img src="placas/placa-05.png" alt=""></div>
+        </div>
         <div class="acc"><span>Recomendar</span><span>Comentar</span><span>Compartir</span><span>Enviar</span></div>
       </div>
     </div>
 
     <div>
-      <div class="titulito">El carrusel: <span>una idea por placa</span></div>
-      <div class="sub">Se lee deslizando, en unos 30 segundos. Cada placa cuenta una sola idea.</div>
+      <div class="titulito">Las 5 imágenes: <span>una idea por placa</span></div>
+      <div class="sub">Se suben como fotos al post y se leen pasando de una a otra, en unos 30 segundos.</div>
       <div class="tira">
         <figure><img src="placas/placa-01.png" alt=""><figcaption><b>1.</b> Portada: el titular que frena el scroll</figcaption></figure>
         <figure><img src="placas/placa-02.png" alt=""><figcaption><b>2.</b> Quién usa más la IA: dos aulas de 100 chicos</figcaption></figure>
@@ -124,8 +131,8 @@
         <p>Elegimos los hallazgos <b>más llamativos y a la vez más sólidos</b>: quién usa la IA, cuánto se achica la ventaja y quiénes quedan afuera. La brecha de notas y la diferencia entre escuelas van en el texto del post; las fórmulas y los detalles, en el informe completo.</p>
       </div>
       <div class="card">
-        <div class="q">¿Por qué un carrusel de 5 placas?</div>
-        <p><b>Una idea por placa</b>, y se lee en unos 30 segundos: muchos lectores no llegan al final de un carrusel largo. La portada tiene que frenar el scroll; la última lleva al informe completo.</p>
+        <div class="q">¿Por qué 5 imágenes?</div>
+        <p><b>Una idea por imagen</b>, y se lee en unos 30 segundos: muchos lectores no llegan al final de una serie larga. La portada tiene que frenar el scroll; la última lleva al informe completo.</p>
       </div>
       <div class="card">
         <div class="q">¿Por qué estos gráficos?</div>
@@ -143,7 +150,7 @@
     </div>
   </div>
 
-  <div class="pie"><b>En el post:</b> el carrusel va acompañado de un resumen de los hallazgos, los nombres de los tres autores y el link al informe final.</div>
+  <div class="pie"><b>En el post:</b> las 5 imágenes van acompañadas de un resumen de los hallazgos, los nombres de los tres autores y el link al informe final.</div>
 </section>
 </body>
 </html>
