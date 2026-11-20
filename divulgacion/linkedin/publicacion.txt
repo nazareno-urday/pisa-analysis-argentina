@@ -1,20 +1,24 @@
-La inteligencia artificial ya llegó a las aulas argentinas. Pero no llegó igual para todos.
+¿Usar ChatGPT te sube la nota?
 
-📄 Resumen
-Analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años, de 412 escuelas. Encontramos que:
+Analizamos los datos de 11.092 estudiantes argentinos de 15 años en PISA 2025. La respuesta es más incómoda de lo que parece.
 
-→ Entre los chicos de familias con más recursos y los de familias con menos hay 82 puntos de diferencia en ciencias.
-→ Los chicos de familias con más recursos usan la IA bastante más seguido, en todas las tareas que mide PISA.
-→ Los que la usan más sacan mejores notas, pero esa ventaja se achica a menos de la mitad cuando comparamos chicos parecidos.
-→ 3 de cada 10 estudiantes no respondieron las preguntas sobre IA, y son los que menos rinden.
-→ La diferencia en el uso de IA está más entre una escuela y otra que entre compañeros del mismo curso.
+📊 Los chicos de familias con más recursos usan chatbots de IA bastante más seguido. Y además sacan 82 puntos más en ciencias.
 
-Son asociaciones, no causas: los datos muestran quién usa la IA y cuánto, no si ayuda o perjudica el aprendizaje.
+📉 Los que usan más IA tienen mejores notas… pero cuando comparamos chicos parecidos, esa ventaja se achica a menos de la mitad.
 
-✍️ Autores: Nazareno Urday Quiroga, Juan Ignacio Cordero y Matias Sanchez.
+👥 3 de cada 10 estudiantes no respondieron las preguntas sobre IA. Son los que menos rinden: quedan afuera de la foto.
 
-🔗 Informe final completo: [LINK AL INFORME FINAL]
+🏫 La diferencia de uso está más entre una escuela y otra que entre compañeros del mismo curso.
 
-¿Qué ves en tu escuela o en tu casa? Te leemos en los comentarios.
+La conclusión: la IA llegó a las aulas argentinas, pero no llegó igual para todos.
 
-#Educación #InteligenciaArtificial #PISA2025 #Argentina #DesigualdadEducativa
+Una aclaración honesta: son asociaciones, no causas. Los datos no dicen si la IA ayuda o perjudica el aprendizaje; sí dicen quién la usa y cuánto.
+
+En el carrusel te lo contamos en 5 placas 👉
+
+📄 Informe final completo: [LINK AL INFORME FINAL]
+✍️ Autores: Nazareno Urday Quiroga, Juan Ignacio Cordero y Matias Sanchez
+
+¿En tu escuela pasa lo mismo? Te leemos en los comentarios.
+
+#Educación #InteligenciaArtificial #PISA2025 #Argentina
