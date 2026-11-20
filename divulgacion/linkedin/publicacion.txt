@@ -1,12 +1,18 @@
-¿Usar ChatGPT te sube la nota?
+¿La inteligencia artificial mejora las notas de los estudiantes?
 
-Analizamos a 11.092 estudiantes argentinos de 15 años con datos de PISA 2025. Spoiler: la IA llegó a las aulas, pero no llegó igual para todos.
+Analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años. La pregunta de fondo resultó ser otra: quién la usa.
 
-Los chicos de familias con más recursos la usan bastante más. Y la ventaja de usarla se achica a menos de la mitad cuando comparás chicos parecidos.
+La IA ya llegó a las aulas, pero no llegó igual para todos:
 
-Te lo contamos en 5 placas 👇
+→ Los estudiantes de familias con más recursos la usan con mucha más frecuencia.
+→ Al comparar estudiantes con características similares, la ventaja de usarla se reduce a menos de la mitad.
+→ 3 de cada 10 no respondieron las preguntas sobre IA, y son quienes menos rinden.
+
+Son asociaciones, no causas. Pero dejan una pregunta abierta para escuelas y políticas educativas: ¿cómo hacemos para que la IA llegue a todos por igual?
+
+Los hallazgos, en 5 placas 👇
 
 📄 Informe completo: [LINK AL INFORME FINAL]
-✍️ Nazareno Urday Quiroga, Juan Ignacio Cordero y Matias Sanchez
+✍️ Autores: Nazareno Urday Quiroga, Juan Ignacio Cordero y Matias Sanchez
 
 #Educación #InteligenciaArtificial #PISA2025 #Argentina
