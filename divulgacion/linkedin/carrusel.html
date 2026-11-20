@@ -5,69 +5,39 @@
 <title>La IA también tiene clase social</title>
 <style>
   @page { size: 1080px 1350px; margin: 0; }
-  :root { --am:#FFE100; --ro:#E3000F; --ne:#0B0B0B; --bl:#FFFFFF; --gr:#F1F1EC; --gr2:#D9D9D1; --gris:#9a9a9a; }
+  :root { --am:#FFE100; --ro:#E3000F; --ne:#0B0B0B; --bl:#FFFFFF; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body { font-family: "Inter", sans-serif; background: #fff; }
-  .slide { width: 1080px; height: 1350px; position: relative; overflow: hidden; page-break-after: always; padding: 84px 80px 0; display: flex; flex-direction: column; }
+  body { font-family: "Inter", sans-serif; }
+  .slide { width: 1080px; height: 1350px; position: relative; overflow: hidden; page-break-after: always; padding: 80px 80px 0; display: flex; flex-direction: column; }
   .slide:last-child { page-break-after: auto; }
   .am { background: var(--am); color: var(--ne); }
   .bl { background: var(--bl); color: var(--ne); }
   .ne { background: var(--ne); color: var(--bl); }
   .ro { background: var(--ro); color: var(--bl); }
   .D { font-family: "Inter Display", "Inter", sans-serif; font-weight: 900; }
-
-  .kick { display: inline-block; align-self: flex-start; font-family: "Inter Display"; font-weight: 900; font-size: 26px; letter-spacing: 3px; padding: 10px 20px; background: var(--ro); color: var(--bl); text-transform: uppercase; }
-  .ro .kick, .am .kick.n { background: var(--ne); color: var(--am); }
+  .kick { align-self: flex-start; font-family: "Inter Display"; font-weight: 900; font-size: 28px; letter-spacing: 3px; padding: 10px 22px; background: var(--ro); color: var(--bl); text-transform: uppercase; }
   .ne .kick { background: var(--am); color: var(--ne); }
-  h2 { font-family: "Inter Display"; font-weight: 900; font-size: 84px; line-height: .98; letter-spacing: -2.5px; text-transform: uppercase; margin-top: 34px; }
-  h2 span { color: var(--ro); }
-  .ne h2 span { color: var(--am); }
-  .ro h2 span { color: var(--am); }
-  .txt { font-size: 38px; line-height: 1.32; font-weight: 500; margin-top: 28px; }
-  .txt b { font-weight: 800; }
-  .txt .res { background: var(--am); color: var(--ne); padding: 0 8px; }
-  .ne .txt .res { background: var(--am); color: var(--ne); }
-  .mini { font-size: 27px; line-height: 1.32; font-weight: 600; opacity: .75; margin-top: 18px; }
-  .gigante { font-family: "Inter Display"; font-weight: 900; font-size: 200px; line-height: .86; letter-spacing: -8px; margin-top: 30px; }
-  .gigante small { font-size: 70px; letter-spacing: -1px; }
-
+  .ro .kick, .am .kick.n { background: var(--ne); color: var(--am); }
+  .num { font-family: "Inter Display"; font-weight: 900; line-height: .85; letter-spacing: -9px; margin-top: 34px; }
+  .frase { font-size: 40px; line-height: 1.25; font-weight: 800; margin-top: 26px; letter-spacing: -.4px; }
+  .frase .m { background: var(--am); color: var(--ne); padding: 0 8px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .ilus { display: flex; align-items: center; justify-content: center; margin-top: 34px; }
+  .dato { margin-top: auto; margin-bottom: 120px; border-radius: 16px; padding: 26px 32px; font-size: 30px; line-height: 1.32; font-weight: 600; background: rgba(0,0,0,.07); }
+  .ne .dato { background: rgba(255,255,255,.1); }
+  .ro .dato { background: rgba(0,0,0,.22); }
+  .dato .t { display: block; font-family: "Inter Display"; font-weight: 900; font-size: 24px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ro); margin-bottom: 8px; }
+  .ne .dato .t, .ro .dato .t { color: var(--am); }
+  .dato b { font-weight: 800; }
   .pie { position: absolute; left: 0; right: 0; bottom: 0; height: 84px; display: flex; align-items: center; justify-content: space-between; padding: 0 80px; font-size: 22px; font-weight: 700; }
-  .am .pie, .bl .pie { background: var(--ne); color: #d8d8d8; }
+  .am .pie, .bl .pie, .ro .pie { background: var(--ne); color: #d8d8d8; }
   .ne .pie { background: var(--am); color: var(--ne); }
-  .ro .pie { background: var(--ne); color: #d8d8d8; }
   .pie .n { font-family: "Inter Display"; font-weight: 900; font-size: 30px; }
   .am .pie .n, .bl .pie .n, .ro .pie .n { color: var(--am); }
-
-  /* barras horizontales */
-  .hb { margin-top: 36px; }
-  .hb .f { display: flex; align-items: center; gap: 24px; margin-bottom: 22px; }
-  .hb .et { width: 300px; font-size: 32px; font-weight: 800; line-height: 1.1; }
-  .hb .pi { flex: 1; height: 82px; }
-  .hb .r { height: 100%; border-radius: 0 12px 12px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 22px; font-family: "Inter Display"; font-weight: 900; font-size: 48px; color: var(--bl); white-space: nowrap; }
-
-  /* escalera */
-  .esc { display: flex; align-items: flex-end; gap: 30px; height: 470px; margin-top: 40px; }
-  .esc .c { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
-  .esc .v { font-family: "Inter Display"; font-weight: 900; font-size: 64px; margin-bottom: 10px; }
-  .esc .b { width: 100%; border-radius: 12px 12px 0 0; background: var(--gris); }
-  .esc .c.top .b { background: var(--ro); } .esc .c.top .v { color: var(--ro); }
-  .esc-ej { display: flex; gap: 30px; border-top: 5px solid var(--ne); padding-top: 12px; }
-  .esc-ej div { flex: 1; text-align: center; font-size: 26px; font-weight: 800; line-height: 1.12; }
-
-  /* muñequitos */
-  .mon .f { display: flex; align-items: center; gap: 18px; margin-bottom: 26px; }
-  .mon .et { width: 250px; font-size: 30px; font-weight: 800; line-height: 1.1; }
-  .mon .m { flex: 1; display: flex; gap: 4px; height: 70px; align-items: flex-end; }
-  .mon .m svg { height: 100%; width: auto; }
-  .mon .c { width: 90px; text-align: right; font-family: "Inter Display"; font-weight: 900; font-size: 56px; color: var(--ro); }
-
-  .gente { display: grid; grid-template-columns: repeat(10, 1fr); gap: 14px; margin-top: 46px; }
-  .gente svg { width: 100%; height: auto; display: block; }
-
-  .cita { background: var(--bl); color: var(--ne); border-radius: 16px; padding: 40px 44px; margin-top: 40px; font-size: 31px; line-height: 1.38; }
-  .cita i { font-style: italic; }
-  .link { display: inline-block; margin-top: 36px; background: var(--am); color: var(--ne); font-family: "Inter Display"; font-weight: 900; font-size: 40px; padding: 18px 30px; border-radius: 12px; }
+  .lbl { font-family: "Inter Display"; font-weight: 900; text-anchor: middle; }
+  .tareas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 10px; }
+  .tareas div { text-align: center; font-size: 24px; font-weight: 800; line-height: 1.15; }
+  .tareas div b { display: block; font-family: "Inter Display"; font-weight: 900; font-size: 64px; color: var(--ro); line-height: 1; }
 </style>
 </head>
 <body>
@@ -75,79 +45,126 @@
 <!-- 1. PORTADA -->
 <section class="slide am">
   <div class="kick n">PISA 2025 · ARGENTINA</div>
-  <div class="D" style="font-size:132px;line-height:.93;letter-spacing:-4px;text-transform:uppercase;margin-top:48px">La IA<br>también<br>tiene<br><span style="background:var(--ne);color:var(--am);padding:0 20px">clase</span><br><span style="background:var(--ne);color:var(--am);padding:0 20px">social</span></div>
-  <p class="txt" style="font-weight:700;font-size:42px;margin-top:44px;max-width:860px">Analizamos los datos de 11.092 estudiantes argentinos de 15 años. Esto es lo que encontramos.</p>
-  <div style="position:absolute;right:80px;top:250px;width:270px;height:270px;border-radius:50%;background:var(--ro);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(10deg);border:12px solid var(--am);box-shadow:0 0 0 6px var(--ro);text-align:center">
-    <div class="D" style="font-size:74px;line-height:1">11.092</div><div style="font-size:24px;font-weight:800;line-height:1.15;margin-top:6px">ESTUDIANTES<br>412 ESCUELAS</div>
+  <div class="D" style="font-size:120px;line-height:.92;letter-spacing:-4px;text-transform:uppercase;margin-top:44px">La IA<br>también<br>tiene<br><span style="background:var(--ne);color:var(--am);padding:0 16px">clase</span><br><span style="background:var(--ne);color:var(--am);padding:0 16px">social</span></div>
+  <div style="position:absolute;right:56px;top:190px">
+    <svg width="350" height="416" viewBox="0 0 640 760">
+      <rect x="20" y="10" width="300" height="540" rx="42" fill="#0B0B0B"/>
+      <rect x="40" y="56" width="260" height="446" rx="16" fill="#FFFFFF"/>
+      <rect x="60" y="86" width="170" height="62" rx="20" fill="#E3000F"/>
+      <text x="145" y="129" class="lbl" font-size="34" fill="#fff">IA</text>
+      <rect x="110" y="170" width="170" height="62" rx="20" fill="#FFE100"/>
+      <rect x="60" y="254" width="190" height="62" rx="20" fill="#E3000F"/>
+      <rect x="110" y="338" width="170" height="62" rx="20" fill="#FFE100"/>
+      <rect x="60" y="422" width="136" height="46" rx="16" fill="#E3000F"/>
+      <rect x="140" y="26" width="60" height="10" rx="5" fill="#333"/>
+      <rect x="420" y="300" width="170" height="270" rx="28" fill="#8f8f8f"/>
+      <rect x="434" y="328" width="142" height="214" rx="12" fill="#d9d9d1"/>
+      <rect x="450" y="354" width="76" height="30" rx="12" fill="#b5b5ad"/>
+    </svg>
   </div>
-  <div style="margin-top:auto;margin-bottom:120px">
-    <div style="font-size:27px;font-weight:700">Nazareno Urday Quiroga · Juan Ignacio Cordero · Matias Sanchez</div>
-    <div class="D" style="display:inline-block;margin-top:30px;background:var(--ne);color:var(--am);font-size:40px;padding:16px 30px;border-radius:12px">DESLIZÁ →</div>
+  <p class="frase" style="font-weight:700;max-width:650px;margin-top:44px">Analizamos los datos de PISA 2025 de 11.092 estudiantes argentinos de 15 años, de 412 escuelas. Esto es lo que encontramos.</p>
+  <div style="position:absolute;right:80px;bottom:150px;width:240px;height:240px;border-radius:50%;background:var(--ro);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(10deg);border:10px solid var(--am);box-shadow:0 0 0 6px var(--ro);text-align:center">
+    <div class="D" style="font-size:62px;line-height:1">11.092</div><div style="font-size:20px;font-weight:800;line-height:1.15;margin-top:6px">ESTUDIANTES<br>412 ESCUELAS</div>
   </div>
-  <div class="pie"><span>Datos: PISA 2025 (OCDE)</span><span class="n">1 / 5</span></div>
+  <div class="D" style="position:absolute;left:80px;bottom:124px;background:var(--ne);color:var(--am);font-size:40px;padding:16px 30px;border-radius:12px">DESLIZÁ →</div>
+  <div class="pie"><span>Urday Quiroga, Cordero y Sanchez · Datos: PISA 2025</span><span class="n">1 / 5</span></div>
 </section>
 
-<!-- 3. DOS AULAS -->
+<!-- 2. QUIÉN LA USA -->
 <section class="slide bl">
-  <div class="kick">1 · La IA no llega igual a todos</div>
-  <p class="txt" style="margin-top:34px;font-weight:800">9 de cada 10 chicos que respondieron ya usaron un chatbot para la escuela. Pero no todos lo usan igual.</p>
-  <h2>Imaginá dos aulas de <span>100 chicos</span></h2>
-  <p class="txt">Una con chicos de familias con más recursos y otra con chicos de familias con menos. En el aula con más recursos hay <b class="res">más chicos que usan IA todas las semanas</b>:</p>
-  <div class="mon" style="margin-top:40px">
-    <div class="f"><div class="et">Para investigar</div><div class="m" data-n="17"></div><div class="c">17</div></div>
-    <div class="f"><div class="et">Para resumir</div><div class="m" data-n="16"></div><div class="c">16</div></div>
-    <div class="f"><div class="et">Para aprender</div><div class="m" data-n="15"></div><div class="c">15</div></div>
-    <div class="f"><div class="et">Para escribir borradores</div><div class="m" data-n="13"></div><div class="c">13</div></div>
+  <div class="kick">Quién la usa</div>
+  <div class="num" style="font-size:240px;color:var(--ro)">17<span style="font-size:80px;letter-spacing:-2px;color:var(--ne)"> chicos más</span></div>
+  <p class="frase">En un aula de 100 chicos de familias con más recursos, <span class="m">17 más usan IA todas las semanas para investigar</span> que en un aula de 100 con menos.</p>
+  <div class="ilus" id="gente17"></div>
+  <div class="dato">
+    <span class="t">Y pasa en las cuatro tareas</span>
+    <div class="tareas">
+      <div><b>17</b>Investigar</div><div><b>16</b>Resumir</div><div><b>15</b>Aprender</div><div><b>13</b>Escribir borradores</div>
+    </div>
   </div>
-  <p class="mini">Cada muñequito es un chico más en el aula con más recursos. Pasa en las cuatro tareas, sin excepción.</p>
-  <div class="pie"><span>Urday Quiroga, Cordero y Sanchez (2026) · Datos: PISA 2025</span><span class="n">2 / 5</span></div>
+  <div class="pie"><span>Urday Quiroga, Cordero y Sanchez · Datos: PISA 2025</span><span class="n">2 / 5</span></div>
 </section>
 
-<!-- 4. LA VENTAJA -->
+<!-- 3. LA VENTAJA SE DESINFLA -->
 <section class="slide am">
-  <div class="kick">2 · ¿Usar IA te sube la nota?</div>
-  <h2>A primera vista, sí. Pero <span>la ventaja se desinfla</span></h2>
-  <p class="txt">Los que usan IA más seguido sacan más puntos en ciencias. Pero los chicos con más recursos usan más IA <b>y, a la vez,</b> sacan mejores notas. Por eso comparamos chicos parecidos: mismos recursos, mismo sexo y mismo año.</p>
-  <p class="mini" style="opacity:.85">Puntos de más en ciencias por usar la IA un poco más seguido (por ejemplo, una vez por semana en vez de una vez por mes):</p>
-  <div class="hb" style="margin-top:28px">
-    <div class="f"><div class="et">Mirando a todos juntos</div><div class="pi"><div class="r" style="width:100%;background:var(--ne)">9,5</div></div></div>
-    <div class="f"><div class="et">Comparando chicos parecidos</div><div class="pi"><div class="r" style="width:42%;background:var(--ro)">4</div></div></div>
+  <div class="kick">¿Te sube la nota?</div>
+  <div class="num" style="font-size:240px;color:var(--ro)">−58%</div>
+  <p class="frase">Los que usan más IA sacan mejores notas. Pero al comparar estudiantes con los mismos recursos, sexo y año, <span class="m" style="background:var(--ne);color:var(--am)">esa ventaja se desinfla un 58 %</span>.</p>
+  <div class="ilus">
+    <svg width="860" height="330" viewBox="0 0 860 400">
+      <ellipse cx="250" cy="160" rx="140" ry="155" fill="#0B0B0B"/>
+      <ellipse cx="200" cy="100" rx="28" ry="46" fill="#3a3a3a"/>
+      <polygon points="236,312 264,312 250,332" fill="#0B0B0B"/>
+      <path d="M250 332 C 232 356, 268 372, 250 398" stroke="#0B0B0B" stroke-width="5" fill="none"/>
+      <text x="250" y="182" class="lbl" font-size="78" fill="#FFE100">9,5</text>
+      <text x="250" y="222" class="lbl" font-size="24" fill="#FFE100">PUNTOS</text>
+      <path d="M430 210 L 520 210" stroke="#0B0B0B" stroke-width="12" stroke-linecap="round"/>
+      <polygon points="520,186 560,210 520,234" fill="#0B0B0B"/>
+      <path d="M690 210 C 610 205, 615 320, 680 330 C 700 334, 720 330, 735 318 C 770 290, 760 214, 690 210 Z" fill="#E3000F"/>
+      <path d="M650 300 q 15 10 30 0" stroke="#b30009" stroke-width="5" fill="none"/>
+      <polygon points="676,330 696,330 686,346" fill="#E3000F"/>
+      <path d="M686 346 C 672 364, 700 380, 686 398" stroke="#E3000F" stroke-width="5" fill="none"/>
+      <text x="692" y="282" class="lbl" font-size="58" fill="#fff">4</text>
+    </svg>
   </div>
-  <div style="display:flex;align-items:center;gap:36px;margin-top:20px">
-    <div class="gigante" style="color:var(--ro);font-size:150px;margin-top:0">−58%</div>
-    <p class="txt" style="font-weight:800;margin-top:0;font-size:36px">La ventaja se achica a menos de la mitad.</p>
+  <div style="display:flex;justify-content:space-between;font-size:26px;font-weight:800;margin-top:6px;padding:0 30px">
+    <span style="width:360px;text-align:center">Mirando a todos juntos</span><span style="width:330px;text-align:center">Comparando estudiantes iguales</span>
   </div>
-  <div class="pie"><span>Urday Quiroga, Cordero y Sanchez (2026) · Datos: PISA 2025</span><span class="n">3 / 5</span></div>
+  <div class="dato">
+    <span class="t">¿Por qué se desinfla?</span>
+    Los estudiantes con más recursos <b>usan más IA y, a la vez, sacan mejores notas</b>. Y usarla para escribir borradores no se asocia con mejores notas.
+  </div>
+  <div class="pie"><span>Urday Quiroga, Cordero y Sanchez · Datos: PISA 2025</span><span class="n">3 / 5</span></div>
 </section>
 
-<!-- 7. LOS INVISIBLES -->
+<!-- 4. LOS INVISIBLES -->
 <section class="slide ne">
-  <div class="kick">3 · Los invisibles</div>
-  <div class="gente" id="gente" style="margin-top:90px"></div>
-  <div class="gigante" style="color:var(--ro);font-size:170px;margin-top:50px">3 de cada 10</div>
-  <p class="txt">chicos no respondieron las preguntas sobre IA. Y sacan <b style="color:var(--am)">66 puntos menos</b> en ciencias que los que sí respondieron.</p>
-  <p class="txt" style="margin-top:40px"><span class="res" style="font-weight:800">Los chicos a los que más les cuesta la escuela quedan afuera de la foto.</span></p>
-  <div class="pie"><span>Urday Quiroga, Cordero y Sanchez (2026) · Datos: PISA 2025</span><span class="n">4 / 5</span></div>
+  <div class="kick">Los invisibles</div>
+  <div class="num" style="font-size:172px;color:var(--ro);letter-spacing:-6px;white-space:nowrap">3 de cada 10</div>
+  <p class="frase">estudiantes no respondieron las preguntas sobre IA… <span class="m">y sacan 66 puntos menos</span> en ciencias que los que sí respondieron.</p>
+  <div class="ilus" id="invisibles"></div>
+  <div class="dato">
+    <span class="t">¿Por qué importa?</span>
+    Aun comparando estudiantes con los mismos recursos, la diferencia sigue siendo de <b>54 puntos</b>. Los que más necesitan ayuda quedan afuera de los datos sobre IA.
+  </div>
+  <div class="pie"><span>Urday Quiroga, Cordero y Sanchez · Datos: PISA 2025</span><span class="n">4 / 5</span></div>
 </section>
 
-<!-- 7. CIERRE -->
+<!-- 5. CONCLUSIÓN -->
 <section class="slide ro">
-  <div class="kick">Entonces…</div>
-  <h2>¿La IA sirve o <span>no sirve?</span></h2>
-  <p class="txt">Estos datos no lo pueden contestar. PISA es una foto de un solo momento: muestra qué cosas van juntas, no qué causa qué.</p>
-  <div class="D" style="margin-top:56px;font-size:66px;line-height:1.06;letter-spacing:-1.5px"><span style="background:var(--am);color:var(--ne);padding:0 14px;box-decoration-break:clone;-webkit-box-decoration-break:clone">Lo que sí está claro: la IA llegó a la escuela argentina, pero no llegó igual para todos.</span></div>
-  <div style="margin-top:64px;background:var(--ne);border-radius:16px;padding:34px 40px">
-    <div class="D" style="font-size:40px;color:var(--am)">Leé el estudio completo</div>
-    <div style="font-size:30px;line-height:1.35;margin-top:10px;color:#eee">Todos los datos y los cálculos están en el estudio completo. <b style="color:#fff">El link está en la publicación.</b></div>
+  <div class="kick">Conclusión</div>
+  <div class="D" style="font-size:100px;line-height:.98;letter-spacing:-3px;margin-top:44px">La IA llegó a la escuela.</div>
+  <div class="D" style="font-size:100px;line-height:1.12;letter-spacing:-3px;margin-top:18px"><span style="background:var(--am);color:var(--ne);padding:0 14px;box-decoration-break:clone;-webkit-box-decoration-break:clone">Pero no llegó igual para todos.</span></div>
+  <div style="display:flex;gap:34px;align-items:center;margin-top:56px">
+    <svg width="210" height="134" viewBox="0 0 520 330" style="flex:0 0 auto">
+      <polygon points="260,10 500,130 20,130" fill="#0B0B0B"/>
+      <rect x="50" y="130" width="420" height="190" fill="#0B0B0B"/>
+      <rect x="225" y="210" width="70" height="110" fill="#FFE100"/>
+      <rect x="90" y="165" width="70" height="60" fill="#FFE100"/>
+      <rect x="360" y="165" width="70" height="60" fill="#6b6b6b"/>
+      <circle cx="260" cy="88" r="22" fill="#FFE100"/>
+    </svg>
+    <p style="font-size:32px;line-height:1.3;font-weight:600"><b style="font-weight:800">La brecha está entre escuelas:</b> más de la mitad de la diferencia en el uso de IA aparece entre una escuela y otra, no entre compañeros de curso.</p>
+  </div>
+  <p style="font-size:28px;line-height:1.3;font-weight:600;margin-top:30px;opacity:.9">Son asociaciones, no causas: los datos no dicen si la IA ayuda o perjudica, sí quién la usa y cuánto.</p>
+  <div style="position:absolute;left:80px;right:80px;bottom:120px;background:var(--ne);border-radius:16px;padding:26px 36px;display:flex;justify-content:space-between;align-items:center">
+    <div><div class="D" style="font-size:38px;color:var(--am)">Estudio completo</div><div style="font-size:26px;color:#ddd;margin-top:6px">Datos, método y resultados · El link está en la publicación</div></div>
+    <div class="D" style="font-size:70px;color:var(--am)">↓</div>
   </div>
   <div class="pie"><span>Nazareno Urday Quiroga · Juan Ignacio Cordero · Matias Sanchez</span><span class="n">5 / 5</span></div>
 </section>
 
 <script>
-  const persona = c => `<svg viewBox="0 0 40 80"><circle cx="20" cy="13" r="11" fill="${c}"/><path d="M4 78 V44 a16 16 0 0 1 32 0 V78 Z" fill="${c}"/></svg>`;
-  const g = document.getElementById('gente');
-  for (let i = 0; i < 10; i++) g.insertAdjacentHTML('beforeend', persona(i < 3 ? '#E3000F' : '#FFFFFF'));
-  document.querySelectorAll('.m').forEach(m => { for (let i = 0; i < +m.dataset.n; i++) m.insertAdjacentHTML('beforeend', persona('#E3000F')); });
+  const persona = (c, extra='') => `<svg viewBox="0 0 40 80" ${extra}><circle cx="20" cy="13" r="11" fill="${c}"/><path d="M4 78 V44 a16 16 0 0 1 32 0 V78 Z" fill="${c}"/></svg>`;
+  const fantasma = `<svg viewBox="0 0 40 80"><circle cx="20" cy="13" r="10" fill="none" stroke="#E3000F" stroke-width="2.4" stroke-dasharray="4 3"/><path d="M5 78 V44 a15 15 0 0 1 30 0 V78 Z" fill="none" stroke="#E3000F" stroke-width="2.4" stroke-dasharray="4 3"/></svg>`;
+  const g = document.getElementById('gente17');
+  let h = '<div style="display:grid;grid-template-columns:repeat(9,58px);gap:12px 16px;justify-content:center">';
+  for (let i = 0; i < 17; i++) h += `<div style="height:116px">${persona('#E3000F','style="height:100%;width:auto"')}</div>`;
+  g.innerHTML = h + '</div>';
+  const v = document.getElementById('invisibles');
+  let k = '<div style="display:grid;grid-template-columns:repeat(10,1fr);gap:18px;width:820px">';
+  for (let i = 0; i < 10; i++) k += `<div>${i < 3 ? fantasma : persona('#FFFFFF')}</div>`;
+  v.innerHTML = k + '</div>';
 </script>
 </body>
 </html>
