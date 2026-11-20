@@ -5,19 +5,26 @@
 <title>La verdad sobre la IA en las aulas argentinas</title>
 <style>
   @page { size: A4; margin: 0; }
-  :root { --am:#FFE100; --ro:#E3000F; --ne:#0B0B0B; --bl:#FFFFFF; --gr:#F1F1EC; --tx:#1b1b1b; }
+  :root { --am:#FFE100; --ro:#E3000F; --ne:#0B0B0B; --bl:#FFFFFF; --gr:#F1F1EC; --gr2:#D9D9D1; --tx:#1b1b1b; --gris:#8f8f8f; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body { font-family: "Inter", sans-serif; color: var(--tx); background: var(--bl); }
   .pag { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; }
   .pag:last-child { page-break-after: auto; }
-  h1, h2, h3, .num, .cinta, .sello, .tit { font-family: "Inter Display", "Inter", sans-serif; font-weight: 900; }
+  h1, h2, h3, .num, .cinta, .sello, .tit, .big { font-family: "Inter Display", "Inter", sans-serif; font-weight: 900; }
+  b.res, .res { background: var(--am); padding: 0 1mm; }
 
-  /* ---------- PORTADA ---------- */
+  /* ---------- Cabecera y pie comunes ---------- */
   .cab { background: var(--ne); color: var(--bl); padding: 5mm 12mm; display: flex; justify-content: space-between; align-items: center; }
   .cab .marca { font-family: "Inter Display"; font-weight: 900; font-size: 15pt; letter-spacing: .5px; }
   .cab .marca b { color: var(--am); }
   .cab .dato { font-size: 8.5pt; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; color: #cfcfcf; }
+  .pie { position: absolute; left: 0; right: 0; bottom: 0; background: var(--ne); color: #cfcfcf; padding: 3.2mm 12mm; font-size: 7.8pt; line-height: 1.35; display: flex; gap: 6mm; align-items: center; }
+  .pie .txt { flex: 1; }
+  .pie b { color: var(--am); }
+  .pie .np { font-family: "Inter Display"; font-weight: 900; color: var(--am); font-size: 11pt; white-space: nowrap; }
+
+  /* ---------- PORTADA ---------- */
   .heroe { background: var(--am); padding: 6mm 12mm 7mm; position: relative; }
   .cinta { display: inline-block; background: var(--ro); color: var(--bl); font-size: 11pt; padding: 1.6mm 4mm; letter-spacing: 1.5px; transform: rotate(-2deg); margin-bottom: 4mm; }
   h1 { font-size: 39pt; line-height: .93; letter-spacing: -1.6px; color: var(--ne); text-transform: uppercase; }
@@ -30,8 +37,7 @@
   .firma b { color: var(--ne); }
 
   .cuerpo { padding: 5mm 12mm 0; }
-  .entrada { font-size: 10.8pt; line-height: 1.38; max-width: 140mm; }
-  .entrada b { background: var(--am); padding: 0 1mm; }
+  .entrada { font-size: 10.8pt; line-height: 1.4; max-width: 140mm; }
 
   .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 4.5mm; }
   .caja { border-radius: 2.5mm; padding: 4mm 4.5mm 4mm; }
@@ -40,13 +46,13 @@
   .caja.a { background: var(--am); color: var(--ne); }
   .caja .num { font-size: 36pt; white-space: nowrap; line-height: .9; letter-spacing: -1.5px; }
   .caja .num small { font-size: 12.5pt; letter-spacing: 0; }
-  .caja .que { font-size: 9.6pt; font-weight: 700; line-height: 1.25; margin-top: 2mm; }
+  .caja .que { font-size: 9.5pt; font-weight: 700; line-height: 1.27; margin-top: 2mm; }
 
   .graf { background: var(--gr); border-radius: 2.5mm; padding: 4.5mm 6mm 4mm; margin-top: 4.5mm; }
   .tit { font-size: 16pt; line-height: 1.05; text-transform: uppercase; letter-spacing: -.3px; }
   .tit span { color: var(--ro); }
-  .sub { font-size: 9.6pt; color: #555; margin-top: 1mm; font-weight: 500; }
-  .barras { display: flex; align-items: flex-end; gap: 6mm; height: 52mm; margin-top: 3mm; padding: 0 3mm; }
+  .sub { font-size: 9.4pt; color: #555; margin-top: 1mm; font-weight: 500; line-height: 1.3; }
+  .barras { display: flex; align-items: flex-end; gap: 6mm; height: 50mm; margin-top: 3mm; padding: 0 3mm; }
   .barra { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
   .barra .v { font-family: "Inter Display"; font-weight: 900; font-size: 19pt; margin-bottom: 1mm; }
   .barra .b { width: 100%; border-radius: 1.5mm 1.5mm 0 0; background: #9a9a9a; }
@@ -54,47 +60,92 @@
   .barra.top .v { color: var(--ro); }
   .ejes { display: flex; gap: 6mm; padding: 1.5mm 3mm 0; border-top: .6mm solid var(--ne); }
   .ejes div { flex: 1; text-align: center; font-size: 8.8pt; font-weight: 700; line-height: 1.15; }
-  .flecha { margin-top: 3mm; font-size: 10.5pt; font-weight: 700; }
+  .flecha { margin-top: 3mm; font-size: 10.3pt; font-weight: 700; }
   .flecha b { background: var(--ne); color: var(--am); padding: .4mm 1.6mm; }
 
-  /* ---------- PÁGINA 2 ---------- */
-  .franja { background: var(--ne); color: var(--am); padding: 4.5mm 12mm; }
-  .franja h2 { font-size: 20.5pt; white-space: nowrap; line-height: 1; text-transform: uppercase; letter-spacing: -.6px; }
-  .franja p { color: #e9e9e9; font-size: 10.5pt; margin-top: 1.5mm; font-weight: 500; }
-  .p2 { padding: 4.5mm 12mm 0; }
+  /* ---------- Páginas interiores ---------- */
+  .franja { background: var(--ne); color: var(--am); padding: 4.5mm 12mm 4.2mm; }
+  .franja .kick { display: inline-block; background: var(--ro); color: var(--bl); font-family: "Inter Display"; font-weight: 900; font-size: 8.5pt; letter-spacing: 1.4px; padding: .8mm 2.4mm; margin-bottom: 2mm; }
+  .franja h2 { font-size: 21pt; line-height: 1; text-transform: uppercase; letter-spacing: -.6px; }
+  .franja p { color: #e9e9e9; font-size: 10.3pt; margin-top: 1.6mm; font-weight: 500; line-height: 1.3; }
+  .p2 { padding: 4mm 12mm 0; }
   .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
   .panel { background: var(--gr); border-radius: 2.5mm; padding: 4mm 5mm 4mm; }
-  .panel p.t { font-size: 10pt; line-height: 1.36; margin-top: 2.5mm; }
-  .panel p.t b { background: var(--am); padding: 0 .8mm; }
+  .panel p.t { font-size: 9.9pt; line-height: 1.38; margin-top: 2.5mm; }
+  .gap { margin-top: 4mm; }
 
-  .desinfle { margin-top: 4mm; }
   .fila { display: flex; align-items: center; gap: 2.5mm; margin-bottom: 1.8mm; }
   .fila .et { width: 29mm; font-size: 8.8pt; font-weight: 700; line-height: 1.15; }
   .fila .pista { flex: 1; height: 7.5mm; }
-  .fila .rel { height: 100%; border-radius: 0 1.5mm 1.5mm 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 2mm; font-family: "Inter Display"; font-weight: 900; font-size: 13pt; color: var(--bl); }
+  .fila .rel { height: 100%; border-radius: 0 1.5mm 1.5mm 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 2mm; font-family: "Inter Display"; font-weight: 900; font-size: 13pt; color: var(--bl); white-space: nowrap; }
   .grande { font-family: "Inter Display"; font-weight: 900; font-size: 35pt; line-height: .9; color: var(--ro); letter-spacing: -1px; margin-top: 3mm; }
-  .grande small { font-size: 10pt; color: var(--ne); letter-spacing: 0; font-weight: 800; display: block; line-height: 1.15; margin-top: 1.5mm; }
+  .grande small { font-size: 10pt; color: var(--ne); letter-spacing: 0; font-weight: 800; display: block; line-height: 1.2; margin-top: 1.5mm; }
+  .nota { font-size: 8.5pt; color: #555; font-weight: 600; margin-top: 1.2mm; line-height: 1.3; }
 
   .gente { display: grid; grid-template-columns: repeat(10, 1fr); gap: 1.4mm; margin-top: 4mm; }
   .gente svg { width: 100%; height: auto; display: block; }
 
-  .act .fila .et { width: 34mm; font-size: 9.4pt; }
-  .act .fila .pista { height: 7.6mm; }
-  .nota { font-size: 8.6pt; color: #555; font-weight: 600; margin-top: 1mm; }
+  /* Waffles de 100 */
+  .waffles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9mm; margin-top: 3.5mm; padding: 0 2mm; }
+  .waf { display: grid; grid-template-columns: repeat(10, 1fr); gap: .75mm; }
+  .waf i { display: block; aspect-ratio: 1; border-radius: 50%; background: var(--gr2); }
+  .waf i.on { background: var(--ro); }
+  .waf.top i.on { background: var(--ne); }
+  .waf-n { font-family: "Inter Display"; font-weight: 900; font-size: 24pt; line-height: 1; margin-top: 2.2mm; letter-spacing: -.8px; }
+  .waf-n small { font-size: 10pt; letter-spacing: 0; color: #555; font-weight: 800; }
+  .waf-l { font-size: 9.2pt; font-weight: 800; line-height: 1.18; margin-top: .8mm; }
 
-  .escuela { background: var(--am); border-radius: 2.5mm; padding: 5mm 6mm; margin-top: 5mm; display: flex; gap: 6mm; align-items: center; }
-  .escuela .ico { flex: 0 0 20mm; }
-  .escuela .ico svg { width: 100%; display: block; }
-  .escuela h3 { font-size: 14.5pt; line-height: 1.02; text-transform: uppercase; letter-spacing: -.3px; }
-  .escuela p { font-size: 10.2pt; line-height: 1.36; margin-top: 1.8mm; font-weight: 500; }
+  /* Fila de muñequitos */
+  .pic .fila { margin-bottom: 2.2mm; }
+  .pic .fila .et { width: 36mm; font-size: 9.3pt; }
+  .monos { flex: 1; display: flex; gap: .55mm; align-items: flex-end; height: 8.5mm; }
+  .monos svg { height: 100%; width: auto; display: block; }
+  .pic .cuenta { width: 15mm; text-align: right; font-family: "Inter Display"; font-weight: 900; font-size: 17pt; color: var(--ro); line-height: 1; }
 
-  .cierre { background: var(--ro); color: var(--bl); border-radius: 2.5mm; padding: 5mm 6mm; margin-top: 5mm; }
+  .duo { display: grid; grid-template-columns: 1.08fr 1fr; gap: 5mm; }
+  .negra { background: var(--ne); color: var(--bl); border-radius: 2.5mm; padding: 4.5mm 5mm; }
+  .negra .tit span { color: var(--am); }
+  .negra p { font-size: 9.9pt; line-height: 1.38; margin-top: 2.3mm; color: #ececec; }
+  .negra p b { color: var(--am); }
+  .amarilla { background: var(--am); border-radius: 2.5mm; padding: 4.5mm 5mm; }
+  .amarilla p { font-size: 9.9pt; line-height: 1.38; margin-top: 2.3mm; }
+  .igual { display: flex; align-items: center; justify-content: center; gap: 4mm; margin-top: 3mm; }
+  .igual .lado { text-align: center; font-size: 8.4pt; font-weight: 800; line-height: 1.15; }
+  .igual .lado .ic { font-family: "Inter Display"; font-weight: 900; font-size: 13pt; display: block; margin-bottom: .6mm; }
+  .igual .eq { font-family: "Inter Display"; font-weight: 900; font-size: 26pt; color: var(--ro); }
+  .huevo { display: flex; align-items: center; justify-content: center; gap: 3mm; margin-top: 3mm; }
+  .huevo .burb { background: var(--bl); color: var(--ne); border-radius: 2mm; padding: 2mm 3mm; font-size: 8.8pt; font-weight: 800; text-align: center; line-height: 1.15; flex: 1; }
+  .huevo .flechas { font-family: "Inter Display"; font-weight: 900; font-size: 18pt; color: var(--am); }
+
+  /* Página 4 */
+  .escuela2 { background: var(--am); border-radius: 2.5mm; padding: 4mm 6mm; display: grid; grid-template-columns: 1fr 48mm; gap: 6mm; align-items: center; }
+  .escuela2 .fila .et { width: 40mm; font-size: 9.2pt; }
+  .escuela2 .fila .pista { height: 8mm; }
+  .escuela2 p { font-size: 9.9pt; line-height: 1.36; margin-top: 2mm; font-weight: 500; }
+  .torta { text-align: center; }
+  .torta svg { width: 33mm; height: 33mm; display: block; margin: 0 auto; }
+  .torta .lb { font-size: 8.8pt; font-weight: 800; line-height: 1.15; margin-top: 1.5mm; }
+
+  .mitos-t { display: flex; align-items: baseline; gap: 3mm; }
+  .mitos { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 3mm; }
+  .mito { background: var(--gr); border-radius: 2.5mm; padding: 3mm 4mm 3mm; position: relative; }
+  .mito .frase { font-family: "Inter Display"; font-weight: 900; font-size: 11pt; line-height: 1.12; padding-right: 26mm; min-height: 8.6mm; }
+  .mito .por { font-size: 8.7pt; line-height: 1.3; margin-top: 1.3mm; font-weight: 500; }
+  .estampa { position: absolute; top: 3.2mm; right: 3.2mm; transform: rotate(-7deg); border: .75mm solid; border-radius: 1.2mm; padding: .9mm 1.8mm; font-family: "Inter Display"; font-weight: 900; font-size: 8.6pt; letter-spacing: 1px; text-align: center; line-height: 1; background: var(--bl); }
+  .estampa.v { color: #0f7a2e; border-color: #0f7a2e; }
+  .estampa.f { color: var(--ro); border-color: var(--ro); }
+  .estampa.n { color: #6a6a6a; border-color: #6a6a6a; }
+
+  .pasos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 3mm; }
+  .paso { display: flex; gap: 2.6mm; align-items: flex-start; }
+  .paso .bola { flex: 0 0 9mm; height: 9mm; border-radius: 50%; background: var(--ne); color: var(--am); display: flex; align-items: center; justify-content: center; font-family: "Inter Display"; font-weight: 900; font-size: 13pt; }
+  .paso p { font-size: 8.5pt; line-height: 1.27; }
+  .paso p b { display: block; font-size: 9.6pt; margin-bottom: .4mm; }
+
+  .cierre { background: var(--ro); color: var(--bl); border-radius: 2.5mm; padding: 4.5mm 6mm; }
   .cierre h3 { font-size: 15.5pt; line-height: 1.02; text-transform: uppercase; letter-spacing: -.3px; }
-  .cierre p { font-size: 10.6pt; line-height: 1.38; margin-top: 2mm; font-weight: 500; }
+  .cierre p { font-size: 10pt; line-height: 1.36; margin-top: 2mm; font-weight: 500; }
   .cierre p b { background: var(--am); color: var(--ne); padding: 0 1mm; }
-
-  .pie { position: absolute; left: 0; right: 0; bottom: 0; background: var(--ne); color: #cfcfcf; padding: 3.5mm 12mm; font-size: 7.9pt; line-height: 1.35; }
-  .pie b { color: var(--am); }
 </style>
 </head>
 <body>
@@ -113,34 +164,34 @@
     <div class="sello"><div class="g">11.092</div><div class="c">ESTUDIANTES<br>412 ESCUELAS</div></div>
   </div>
 
-  <div class="firma">Por <b>Juan Ignacio Cordero</b>, <b>Nazareno Urday Quiroga</b> y <b>Matias Sanchez</b></div>
+  <div class="firma">Por <b>Nazareno Urday Quiroga</b>, <b>Juan Ignacio Cordero</b> y <b>Matias Sanchez</b></div>
 
   <div class="cuerpo">
-    <p class="entrada">Todo el mundo discute si ChatGPT “arruina” o “salva” a los chicos. Nosotros fuimos a los datos de la prueba internacional PISA y encontramos algo más incómodo: <b>antes de preguntar qué hace la IA, hay que preguntar quién la tiene a mano.</b> Y la respuesta duele.</p>
+    <p class="entrada">Todo el mundo discute si ChatGPT “arruina” o “salva” a los chicos. Nosotros fuimos a los datos de la prueba internacional PISA y encontramos algo más incómodo: <b class="res">antes de preguntar qué hace la IA, hay que preguntar quién la usa y cuánto.</b> Y la respuesta duele.</p>
 
     <div class="tres">
       <div class="caja n">
         <div class="num">82<small> puntos</small></div>
-        <div class="que">separan en ciencias a los chicos de las familias con más recursos de los que tienen menos. Un abismo.</div>
+        <div class="que">de diferencia en ciencias entre los chicos de familias con más recursos y los de familias con menos. Un abismo.</div>
       </div>
       <div class="caja r">
         <div class="num">+17<small> cada 100</small></div>
-        <div class="que">Entre los de más recursos hay hasta 17 chicos más cada 100 que usan IA todas las semanas para investigar.</div>
+        <div class="que">En las familias con más recursos, de cada 100 chicos hay 17 más que usan IA todas las semanas para investigar.</div>
       </div>
       <div class="caja a">
         <div class="num">9<small> de cada 10</small></div>
-        <div class="que">de los que contestaron ya usaron un chatbot alguna vez para la escuela. La IA ya está adentro del aula.</div>
+        <div class="que">chicos que respondieron ya usaron un chatbot alguna vez para la escuela. La IA ya está adentro del aula.</div>
       </div>
     </div>
 
     <div class="graf">
       <div class="tit">La escalera <span>injusta</span></div>
-      <div class="sub">Puntaje promedio en ciencias según el nivel socioeconómico de la familia</div>
+      <div class="sub">Puntaje promedio en ciencias. Dividimos a los chicos en cuatro grupos iguales, de las familias con menos recursos a las de más.</div>
       <div class="barras">
-        <div class="barra"><div class="v">367</div><div class="b" style="height:38%"></div></div>
+        <div class="barra"><div class="v">367</div><div class="b" style="height:37%"></div></div>
         <div class="barra"><div class="v">382</div><div class="b" style="height:46%"></div></div>
         <div class="barra"><div class="v">402</div><div class="b" style="height:57%"></div></div>
-        <div class="barra top"><div class="v">449</div><div class="b" style="height:82%"></div></div>
+        <div class="barra top"><div class="v">449</div><div class="b" style="height:83%"></div></div>
       </div>
       <div class="ejes">
         <div>El cuarto con<br>MENOS recursos</div><div>Medio-bajo</div><div>Medio-alto</div><div>El cuarto con<br>MÁS recursos</div>
@@ -149,13 +200,73 @@
     </div>
   </div>
 
-  <div class="pie"><b>Fuente:</b> elaboración propia con los datos públicos de la prueba PISA 2025 (OCDE) para Argentina. Las barras del gráfico no arrancan en cero para que se note la diferencia.</div>
+  <div class="pie"><div class="txt"><b>Fuente:</b> elaboración propia con los datos públicos de la prueba PISA 2025 (OCDE) para Argentina. Las barras del gráfico no arrancan en cero para que se note la diferencia.</div><div class="np">1 / 4</div></div>
 </section>
 
 <!-- ============================ PÁGINA 2 ============================ -->
 <section class="pag">
   <div class="franja">
-    <h2>¿Usar IA te sube la nota? Mirá lo que pasa…</h2>
+    <div class="kick">CAPÍTULO 1</div>
+    <h2>¿Quién usa la IA… y para qué?</h2>
+    <p>PISA les preguntó a los chicos cuántas veces usan un chatbot como ChatGPT para cuatro tareas de la escuela.</p>
+  </div>
+
+  <div class="p2">
+    <div class="panel">
+      <div class="tit">Más de la mitad la usa <span>para aprender</span></div>
+      <div class="sub">De cada 100 chicos que respondieron, cuántos usan IA al menos una vez por semana para cada tarea. Cada puntito es un chico.</div>
+      <div class="waffles">
+        <div><div class="waf top" data-n="53"></div><div class="waf-n">53<small> de 100</small></div><div class="waf-l">Que me ayude<br>a aprender</div></div>
+        <div><div class="waf" data-n="42"></div><div class="waf-n">42<small> de 100</small></div><div class="waf-l">Investigar un<br>tema nuevo</div></div>
+        <div><div class="waf" data-n="42"></div><div class="waf-n">42<small> de 100</small></div><div class="waf-l">Resumir un texto<br>que tenía que leer</div></div>
+        <div><div class="waf" data-n="33"></div><div class="waf-n">33<small> de 100</small></div><div class="waf-l">Escribir el borrador<br>de un trabajo</div></div>
+      </div>
+      <div class="nota">El uso más común no es “que me haga la tarea”: es pedirle que me explique. Escribir borradores es lo que menos se hace.</div>
+    </div>
+
+    <div class="panel pic gap">
+      <div class="tit">Pero no todos <span>por igual</span></div>
+      <div class="sub">Por cada 100 chicos, cuántos más usan IA todas las semanas en las familias con más recursos que en las de menos. Cada muñequito es un chico de más.</div>
+      <div style="margin-top:3.5mm">
+        <div class="fila"><div class="et">Investigar un tema</div><div class="monos" data-n="17"></div><div class="cuenta">+17</div></div>
+        <div class="fila"><div class="et">Resumir un texto</div><div class="monos" data-n="16"></div><div class="cuenta">+16</div></div>
+        <div class="fila"><div class="et">Que me ayude a aprender</div><div class="monos" data-n="15"></div><div class="cuenta">+15</div></div>
+        <div class="fila"><div class="et">Escribir un borrador</div><div class="monos" data-n="13"></div><div class="cuenta">+13</div></div>
+      </div>
+      <div class="nota">En las cuatro tareas, sin excepción, la IA se usa más seguido en las casas con más recursos.</div>
+    </div>
+
+    <div class="duo gap">
+      <div class="amarilla">
+        <div class="tit">La diferencia es de <span>cuánto</span>, no de <span>para qué</span></div>
+        <p>Pensábamos que los chicos con más recursos la usarían más “para aprender” y los de menos recursos más “para que les escriba”. <b>No encontramos esa diferencia.</b> Todos la usan para lo mismo; lo que cambia es la frecuencia.</p>
+        <div class="igual">
+          <div class="lado"><span class="ic">MÁS RECURSOS</span>mismas tareas</div>
+          <div class="eq">=</div>
+          <div class="lado"><span class="ic">MENOS RECURSOS</span>mismas tareas</div>
+        </div>
+      </div>
+      <div class="negra">
+        <div class="tit">¿El huevo <span>o la gallina?</span></div>
+        <p>Los chicos con <b>mejores notas</b> usan más IA: de cada 100, hay <b>17 más</b> que la usan todas las semanas, comparados con los de peores notas.</p>
+        <div class="huevo">
+          <div class="burb">¿La IA les sube la nota?</div>
+          <div class="flechas">⇄</div>
+          <div class="burb">¿O los que ya rinden más la buscan más?</div>
+        </div>
+        <p>Con estos datos <b>no se puede saber</b> cuál de las dos cosas pasa primero.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pie"><div class="txt"><b>Ojo con los números:</b> los “de cada 100” del primer gráfico cuentan a los chicos que respondieron la pregunta, tal como aparecen en la encuesta. Las diferencias del segundo gráfico comparan al cuarto de chicos con más recursos con el cuarto con menos.</div><div class="np">2 / 4</div></div>
+</section>
+
+<!-- ============================ PÁGINA 3 ============================ -->
+<section class="pag">
+  <div class="franja">
+    <div class="kick">CAPÍTULO 2</div>
+    <h2>¿Usar IA te sube la nota? Mirá…</h2>
     <p>A primera vista, los que usan IA seguido sacan más puntos. Pero hay trampa.</p>
   </div>
 
@@ -163,63 +274,134 @@
     <div class="dos">
       <div class="panel">
         <div class="tit">La ventaja <span>se desinfla</span></div>
-        <div class="sub">Puntos extra en ciencias por usar IA más seguido</div>
-        <div class="desinfle">
-          <div class="fila"><div class="et">Sin mirar de dónde viene cada chico</div><div class="pista"><div class="rel" style="width:100%;background:#0B0B0B">9,5</div></div></div>
+        <div class="sub">Puntos extra en ciencias por cada “escalón” más de uso de IA (de “nunca” a “todos los días”)</div>
+        <div style="margin-top:4mm">
+          <div class="fila"><div class="et">Mirando a todos juntos</div><div class="pista"><div class="rel" style="width:100%;background:#0B0B0B">9,5</div></div></div>
           <div class="fila"><div class="et">Comparando chicos parecidos</div><div class="pista"><div class="rel" style="width:42%;background:#E3000F">4</div></div></div>
         </div>
-        <div class="grande">−58%<small>Más de la mitad de la “magia” era el origen social, no el chatbot.</small></div>
-        <p class="t">Los chicos con más recursos usan más IA <b>y además</b> ya sacaban mejores notas. Cuando comparás estudiantes del mismo nivel, lo que queda es chiquito.</p>
+        <div class="grande">−58%<small>Más de la mitad de la “magia” era el origen de cada chico, no el chatbot.</small></div>
+        <p class="t">Los chicos con más recursos usan más IA <b class="res">y además</b> ya sacaban mejores notas. Cuando comparás chicos de familias parecidas, lo que queda es chiquito.</p>
       </div>
 
       <div class="panel">
         <div class="tit">Los <span>invisibles</span></div>
-        <div class="sub">A los que les preguntaron por la IA…</div>
+        <div class="sub">De cada 10 chicos a los que les hicieron las preguntas sobre IA…</div>
         <div class="gente" id="gente"></div>
-        <div class="grande">3 de cada 10<small>no contestaron. Y sacan 66 puntos menos.</small></div>
-        <p class="t">Los que más cuesta arriba la tienen <b>ni siquiera aparecen en la foto.</b> Todo lo que se sabe sobre IA en la escuela habla de los que sí respondieron.</p>
+        <div class="grande">3 de cada 10<small>no contestaron. Y sacan 66 puntos menos en ciencias.</small></div>
+        <p class="t">Los que más cuesta arriba la tienen <b class="res">ni siquiera aparecen en la foto.</b> Todo lo que se sabe sobre IA en la escuela habla de los que sí respondieron.</p>
       </div>
     </div>
 
-    <div class="panel act" style="margin-top:5mm">
+    <div class="panel gap">
       <div class="tit">No da lo mismo <span>para qué</span> la usás</div>
-      <div class="sub">Puntos de diferencia en ciencias: los que usan IA todas las semanas contra los que nunca la usan (sin comparar por nivel social)</div>
+      <div class="sub">Puntos de diferencia en ciencias entre los que usan IA todas las semanas y los que nunca la usan</div>
       <div style="margin-top:3mm">
-        <div class="fila"><div class="et">Investigar un tema</div><div class="pista"><div class="rel" style="width:100%;background:#E3000F">+28</div></div></div>
-        <div class="fila"><div class="et">Que te ayude a aprender</div><div class="pista"><div class="rel" style="width:95%;background:#E3000F">+27</div></div></div>
-        <div class="fila"><div class="et">Resumir un texto</div><div class="pista"><div class="rel" style="width:68%;background:#E3000F">+19</div></div></div>
-        <div class="fila"><div class="et">Que te escriba el borrador</div><div class="pista"><div class="rel" style="width:25%;background:#9a9a9a">+7</div></div></div>
+        <div class="fila"><div class="et" style="width:36mm">Investigar un tema</div><div class="pista"><div class="rel" style="width:100%;background:#E3000F">+28</div></div></div>
+        <div class="fila"><div class="et" style="width:36mm">Que me ayude a aprender</div><div class="pista"><div class="rel" style="width:93%;background:#E3000F">+27</div></div></div>
+        <div class="fila"><div class="et" style="width:36mm">Resumir un texto</div><div class="pista"><div class="rel" style="width:66%;background:#E3000F">+19</div></div></div>
+        <div class="fila"><div class="et" style="width:36mm">Escribir el borrador</div><div class="pista"><div class="rel" style="width:25%;background:#9a9a9a">+7</div></div></div>
       </div>
-      <div class="nota">La barra gris es tan chica que no se puede asegurar que haya diferencia: pedirle a la IA que escriba por vos no aparece asociado a mejores notas en ninguna de nuestras cuentas.</div>
+      <div class="nota">La barra gris es tan chica que no se puede asegurar que exista: pedirle a la IA que escriba por vos no aparece ligado a mejores notas en ninguna de nuestras cuentas. Y ojo: estas diferencias todavía no tienen en cuenta de qué familia viene cada chico.</div>
     </div>
 
-    <div class="escuela">
-      <div class="ico">
-        <svg viewBox="0 0 100 90" aria-hidden="true"><polygon points="50,6 96,36 4,36" fill="#0B0B0B"/><rect x="12" y="36" width="76" height="48" fill="#0B0B0B"/><rect x="42" y="56" width="16" height="28" fill="#FFE100"/><rect x="20" y="46" width="13" height="13" fill="#FFE100"/><rect x="67" y="46" width="13" height="13" fill="#FFE100"/><circle cx="50" cy="24" r="5" fill="#FFE100"/></svg>
+    <div class="duo gap" style="grid-template-columns:1fr 1fr">
+      <div class="negra">
+        <div class="tit">Y cuando comparás <span>chicos parecidos</span>…</div>
+        <p>La ventaja solo sigue en pie para <b>investigar</b> y para <b>que te ayude a aprender</b> (unos 5 puntos por escalón). Para <b>resumir</b> desaparece. Para <b>escribir el borrador</b>, nunca existió.</p>
       </div>
-      <div>
-        <h3>Decime a qué escuela vas y te digo cuánta IA usás</h3>
-        <p>Dentro de una misma escuela, la diferencia de uso entre chicos con más y menos recursos se achica a menos de la mitad. <b>Más de la mitad de la brecha no está entre compañeros de banco: está entre una escuela y otra.</b></p>
+      <div class="amarilla">
+        <div class="tit">“De vez en cuando” <span>no cambia nada</span></div>
+        <p>Los chicos que usan IA una o dos veces al mes o al año sacan, en las cuatro tareas, <b>un puntaje que no se distingue</b> del de los que nunca la usan. Las diferencias solo aparecen en los que la usan todas las semanas.</p>
       </div>
     </div>
 
-    <div class="cierre">
-      <h3>Entonces… ¿la IA sirve o no sirve?</h3>
-      <p>Esa es la pregunta que estos datos <b>no pueden contestar.</b> Es una foto de un solo momento: muestra qué cosas van juntas, no qué causa qué. Capaz la IA ayuda; capaz los que ya rinden más son los que más la aprovechan. Lo que sí queda clarísimo es otra cosa: <b>la IA llegó a la escuela argentina, pero no llegó igual para todos.</b></p>
+    <div class="panel gap" style="display:flex;gap:5mm;align-items:center;padding:3.5mm 5mm">
+      <div class="big" style="font-size:24pt;color:var(--ro);white-space:nowrap">= = =</div>
+      <p style="font-size:9.9pt;line-height:1.38"><b>Lo mismo en matemática y en lectura.</b> Hicimos todas las cuentas también con esas dos materias: la ventaja que queda al comparar chicos parecidos es casi igual de chica (unos 4 puntos en matemática y 3 en lectura).</p>
     </div>
   </div>
 
-  <div class="pie"><b>Cómo se hizo:</b> análisis de 11.092 estudiantes argentinos de 15 años de 412 escuelas en la prueba PISA 2025 (OCDE). El uso de IA es lo que cada estudiante dijo de sí mismo. “Comparando chicos parecidos” significa igualar nivel socioeconómico, sexo y año que cursan. “Con más y menos recursos” se refiere al índice socioeconómico de PISA, que no es el ingreso de la familia.</div>
+  <div class="pie"><div class="txt"><b>“Comparando chicos parecidos”</b> significa poner frente a frente a estudiantes con el mismo nivel de recursos en su familia, del mismo sexo y que cursan el mismo año. Así se ve cuánto de la diferencia queda cuando lo demás es igual.</div><div class="np">3 / 4</div></div>
+</section>
+
+<!-- ============================ PÁGINA 4 ============================ -->
+<section class="pag">
+  <div class="franja">
+    <div class="kick">CAPÍTULO 3</div>
+    <h2>Decime a qué escuela vas…</h2>
+    <p>…y te digo cuánta IA usás. La brecha no está tanto en el banco de al lado: está en la puerta de la escuela.</p>
+  </div>
+
+  <div class="p2">
+    <div class="escuela2">
+      <div>
+        <div class="tit">La brecha <span>se achica</span> adentro de cada escuela</div>
+        <div class="sub" style="color:#333">Tamaño de la diferencia de uso de IA entre chicos con más y menos recursos</div>
+        <div style="margin-top:3.5mm">
+          <div class="fila"><div class="et">Comparando chicos de todo el país</div><div class="pista"><div class="rel" style="width:100%;background:#0B0B0B">100%</div></div></div>
+          <div class="fila"><div class="et">Comparando compañeros de la misma escuela</div><div class="pista"><div class="rel" style="width:43%;background:#E3000F">43%</div></div></div>
+        </div>
+        <p>Entre compañeros de una misma escuela la diferencia es <b>menos de la mitad</b>. El resto aparece porque unas escuelas reciben más chicos de familias con recursos que otras.</p>
+      </div>
+      <div class="torta">
+        <svg viewBox="0 0 42 42" aria-hidden="true">
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#FFFFFF" stroke-width="9"/>
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#0B0B0B" stroke-width="9" stroke-dasharray="57 43" stroke-dashoffset="25"/>
+          <text x="21" y="22.5" text-anchor="middle" font-family="Inter Display" font-weight="900" font-size="9" fill="#0B0B0B">57%</text>
+          <text x="21" y="27.6" text-anchor="middle" font-family="Inter" font-weight="800" font-size="3.1" fill="#0B0B0B">o más</text>
+        </svg>
+        <div class="lb">de la brecha de uso se explica por <u>a qué escuela vas</u></div>
+      </div>
+    </div>
+
+    <div class="gap">
+      <div class="mitos-t"><div class="tit" style="font-size:19pt">Mitos <span>y verdades</span></div><div class="sub">Lo que se dice sobre la IA en la escuela, frente a los datos</div></div>
+      <div class="mitos">
+        <div class="mito"><div class="estampa v">VERDADERO</div><div class="frase">“Casi todos los chicos ya usaron IA para la escuela”</div><div class="por">9 de cada 10 de los que respondieron la usaron al menos una vez.</div></div>
+        <div class="mito"><div class="estampa f">FALSO</div><div class="frase">“Todos la usan por igual”</div><div class="por">En las familias con más recursos, hasta 17 chicos más de cada 100 la usan todas las semanas.</div></div>
+        <div class="mito"><div class="estampa n">NO SE SABE</div><div class="frase">“Usar IA te hace sacar mejores notas”</div><div class="por">La ventaja se achica un 58% al comparar chicos parecidos, y estos datos no muestran qué causa qué.</div></div>
+        <div class="mito"><div class="estampa n">SIN PRUEBAS</div><div class="frase">“Que la IA te escriba el trabajo te va a ayudar”</div><div class="por">Usarla para escribir borradores no aparece ligado a mejores notas en ninguna cuenta.</div></div>
+        <div class="mito"><div class="estampa f">FALSO</div><div class="frase">“La diferencia está sobre todo entre compañeros de banco”</div><div class="por">Más de la mitad de la brecha de uso aparece entre una escuela y otra.</div></div>
+        <div class="mito"><div class="estampa n">NO SE VIO</div><div class="frase">“Los que tienen más la usan para cosas más inteligentes”</div><div class="por">Chicos con más y menos recursos la usan para las mismas tareas; cambia cuánto, no para qué.</div></div>
+      </div>
+    </div>
+
+    <div class="cierre gap">
+      <h3>Entonces… ¿la IA sirve o no sirve?</h3>
+      <p>Esa es justo la pregunta que estos datos <b>no pueden contestar.</b> PISA es una foto de un solo momento: muestra qué cosas van juntas, no qué causa qué. Capaz la IA ayuda; capaz los que ya rinden más son los que más la aprovechan. Lo que sí queda clarísimo es otra cosa: <b>la IA llegó a la escuela argentina, pero no llegó igual para todos.</b></p>
+    </div>
+
+    <div class="panel gap" style="padding:3.6mm 5mm">
+      <div class="tit" style="font-size:12.5pt">¿Cómo hicimos este estudio?</div>
+      <div class="pasos">
+        <div class="paso"><div class="bola">1</div><p><b>La prueba</b>11.092 chicos de 15 años de 412 escuelas argentinas rindieron PISA 2025, la evaluación internacional de la OCDE.</p></div>
+        <div class="paso"><div class="bola">2</div><p><b>La encuesta</b>Además del examen, contaron con qué frecuencia usan chatbots de IA para cuatro tareas de la escuela.</p></div>
+        <div class="paso"><div class="bola">3</div><p><b>Las cuentas</b>Comparamos grupos de chicos respetando cómo se eligió la muestra de PISA, para que los resultados representen al país.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pie"><div class="txt"><b>Para tener en cuenta:</b> el uso de IA es lo que cada chico dijo de sí mismo. “Más y menos recursos” se basa en el índice de PISA que combina el estudio y el trabajo de los padres y lo que hay en el hogar; no es el sueldo de la familia. Los resultados sobre IA describen a los chicos que respondieron esas preguntas.</div><div class="np">4 / 4</div></div>
 </section>
 
 <script>
+  const persona = c => `<svg viewBox="0 0 40 80"><circle cx="20" cy="13" r="11" fill="${c}"/><path d="M4 78 V44 a16 16 0 0 1 32 0 V78 Z" fill="${c}"/></svg>`;
+
   // 10 personas: 3 en rojo (no contestaron), 7 en negro
   const g = document.getElementById('gente');
-  for (let i = 0; i < 10; i++) {
-    const c = i < 3 ? '#E3000F' : '#0B0B0B';
-    g.insertAdjacentHTML('beforeend',
-      `<svg viewBox="0 0 40 80"><circle cx="20" cy="13" r="11" fill="${c}"/><path d="M4 78 V44 a16 16 0 0 1 32 0 V78 Z" fill="${c}"/></svg>`);
-  }
+  for (let i = 0; i < 10; i++) g.insertAdjacentHTML('beforeend', persona(i < 3 ? '#E3000F' : '#0B0B0B'));
+
+  // Waffles de 100 puntitos
+  document.querySelectorAll('.waf').forEach(w => {
+    const n = +w.dataset.n;
+    for (let i = 0; i < 100; i++) w.insertAdjacentHTML('beforeend', `<i class="${i < n ? 'on' : ''}"></i>`);
+  });
+
+  // Filas de muñequitos
+  document.querySelectorAll('.monos').forEach(m => {
+    const n = +m.dataset.n;
+    for (let i = 0; i < n; i++) m.insertAdjacentHTML('beforeend', persona('#E3000F'));
+  });
 </script>
 </body>
 </html>
